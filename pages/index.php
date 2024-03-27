@@ -5,8 +5,9 @@
         <link rel="stylesheet" href="../css/styles.css">
     </head>
     <body>
-
+        <?php
+            require_once("../connect/session.php");
+        ?>
     </body>
 
 </html>
-<?php
