@@ -7,7 +7,7 @@ CREATE TABLE Participant(
                             last_name VARCHAR(32) NOT NULL,
                             role ENUM('client', 'contractor'),
                             image_data MEDIUMBLOB,
-                            login VARCHAR(32),
+                            login VARCHAR(32) UNIQUE,
                             hash VARCHAR(80) NOT NULL,
                             session_secret VARCHAR(80),
                             info TEXT
