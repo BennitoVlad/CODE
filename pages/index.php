@@ -7,6 +7,12 @@
     <body>
         <?php
             require_once("../connect/session.php");
+            require("../fragments/sign-out-form.php");
+
+            if(@$login){
+                ?><hr><?php
+
+            }
         ?>
     </body>
 

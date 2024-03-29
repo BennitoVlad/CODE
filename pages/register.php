@@ -30,9 +30,23 @@ $mfieldkeys = array_flip($mfieldlist);
         <input name="new_login" id="login" type="text">
         <br/>
 
+        <?php
+        if(array_key_exists('first_name', $mfieldkeys)){
+        ?>
+        <label class="errmsg">'First name' field needs to be filled in.</label>
+        <br/>
+        <?php
+        }?>
         <label for="first_name">Your first name:</label>
         <input name="first_name" id="first_name" type="text">
         <br/>
+        <?php
+        if(array_key_exists('last_name', $mfieldkeys)){
+            ?>
+            <label class="errmsg">'Last name' field needs to be filled in.</label>
+            <br/>
+            <?php
+        }?>
         <label for="last_name">Your last name:</label>
         <input name="last_name" id="last_name" type="text">
         <br/>
