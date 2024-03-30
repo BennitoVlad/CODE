@@ -50,6 +50,19 @@ $mfieldkeys = array_flip($mfieldlist);
         <label for="last_name">Your last name:</label>
         <input name="last_name" id="last_name" type="text">
         <br/>
+        <?php
+        if(array_key_exists('role', $mfieldkeys)){
+            ?>
+            <label class="errmsg">'Role' field needs to be filled in.</label>
+            <br/>
+            <?php
+        }?>
+        <label for="role">Who are you?</label>
+        <select name="role" id="role">
+            <option value="contractor">Freelancer</option>
+            <option value="client">Client</option>
+        </select>
+        <br/>
 
         <?php
             require("../fragments/password-entry.php")

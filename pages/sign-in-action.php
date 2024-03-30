@@ -47,7 +47,7 @@ else{
                 $session_secret.$literal_abracadabra.$login
             );
 
-            $stmt = $mysqli->prepare("UPDATE Participant SET session_secret = ? WHERE login=?");
+            $stmt = $mysqli->prepare("UPDATE Participant SET session_secret = ? WHERE login=?;");
             if($original_login != $login){
                 $backtrack = "alias:$login";
                 $stmt->bind_param("ss", $backtrack, $original_login);

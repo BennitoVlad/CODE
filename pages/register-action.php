@@ -15,6 +15,9 @@ if(!@$_POST["first_name"]){
 if(!@$_POST["last_name"]){
     $faulty_fields[] = 'last_name';
 }
+if(!@$_POST["role"]){
+    $faulty_fields[] = 'role';
+}
 
 if(!empty($faulty_fields)){
     $extra = 'register.php'.'?missing='.join('+', $faulty_fields);
@@ -27,13 +30,13 @@ else {
     require_once("../connect/session.php");
     $hash = salted_password_hash($password);
 
-    $stmt = $mysqli->prepare("INSERT INTO Participant (login, hash, first_name, last_name) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssss", $new_login, $hash, $first_name, $last_name);
+    $stmt = $mysqli->prepare("INSERT INTO Participant (login, hash, first_name, last_name, role) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssss", $new_login, $hash, $first_name, $last_name, $role);
     $stmt->execute();
 
     if($mysqli->errno){
         $errno = $mysqli->errno;
-        $count_stmt = $mysqli->prepare("SELECT COUNT (*) FROM Participant WHERE login=?;");
+        $count_stmt = $mysqli->prepare("SELECT COUNT(*) FROM Participant WHERE login=?;");
         $count_stmt->bind_param("s", $new_login);
         $count_stmt->execute();
 

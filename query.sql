@@ -15,7 +15,7 @@ CREATE TABLE Participant(
 
 CREATE TABLE ProjectType(
                             id INT AUTO_INCREMENT PRIMARY KEY,
-                            title TINYTEXT NOT NULL UNIQUE
+                            title VARCHAR(64) NOT NULL UNIQUE
 );
 CREATE TABLE Project(
                         id INT AUTO_INCREMENT PRIMARY KEY,

@@ -21,7 +21,7 @@ function salted_password_hash($password)
 }
 
 if($pretended_login && $pretended_shash){
-    $stmt = $mysqli->prepare("SELECT id AS user_id, session_secret, first_name, last_name FROM user"
+    $stmt = $mysqli->prepare("SELECT id AS user_id, session_secret, first_name, last_name FROM Participant "
         ."WHERE login=? AND NOT ISNULL(session_secret)");
     $stmt->bind_param("s", $pretended_login);
     $stmt->execute();
