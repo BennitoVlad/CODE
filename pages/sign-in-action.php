@@ -1,4 +1,7 @@
+
+
 <?php
+
 $host = $_SERVER['HTTP_HOST'];
 $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 
@@ -13,6 +16,7 @@ if(!empty($faulty_fields)){
     $extra = 'sign-in.php'.'?missing='.join('+', $faulty_fields);
 }
 else{
+
     require_once("../connect/session.php");
     $original_login = @$login;
     extract($_POST);
@@ -29,8 +33,9 @@ else{
         $hash = $row[0];
         $fingerprint = explode('$', $hash);
         $salt = $fingerprint[0];
+
         $hashed_original = $fingerprint[1];
-        $hashed_password = $hash(
+        $hashed_password = hash(
             "sha256",
             $salt.$password
         );
@@ -67,5 +72,6 @@ else{
         $mysqli->close();
     }
 }
-header("Location: http://$host$uri/$extra");
+//header("Location: http://$host$uri/$extra");
+header("Location: $extra");
 ?>

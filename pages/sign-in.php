@@ -13,7 +13,7 @@ $mfieldkeys = array_flip($mfieldlist);
     </head>
 
     <body style="text-align: center;">
-    <?php
+     <?php
         if ($failed){
             ?>
             <p class="errmsg">Given combination of the login name and the password you entered matches no registered user.</p>
