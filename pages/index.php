@@ -22,6 +22,7 @@
             require ("../fragments/index-promotional.php");
             require ("../fragments/index-projects.php");
             require ("../fragments/index-info.php");
+            require ("../fragments/index-faq.php");
         ?>
     </body>
 
