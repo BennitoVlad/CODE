@@ -78,6 +78,7 @@ img{
 }
 
 #index-gallery-projtypes{
+    float: left;
     width: 20%;
 }
 #index-gallery-projtypes-list{}
@@ -86,12 +87,14 @@ img{
 }
 
 #index-gallery-freelancers{
+    float: left;
     width: 80%;
 }
 #index-gallery-freelancers-main-blocks{
+    float: left;
     width: 30%;
 }
-#index-gallery-freelancer-block{
+.index-gallery-freelancer-block{
     display: block;
     float: left;
     width: 94%;
@@ -100,19 +103,25 @@ img{
     border-bottom:2px solid black;
 }
 #index-gallery-freelancers-secondary-blocks{
+    float: left;
     width: 70%;
 }
 #index-gallery-secondary-pictures{
-
+    float: left;
+    width: 100%;
 }
-#index-gallery-secondary-picture{
+.index-gallery-secondary-picture{
+    float: left;
     display: block;
-    width: 50%;
-    height: 50vh;
-    padding: 4%;
 
+    width: 50%;
+    height: 25vh;
+    margin: 0;
+    padding: 0;
 }
 #index-gallery-secondary-linkbox{
+    float: left;
+    width: 100%;
     border-right:2px solid black;
     border-bottom:2px solid black;
 }
@@ -120,12 +129,13 @@ img{
 #index-gallery-specs{
     width: 100%;
 }
-#index-gallery-spec{
+.index-gallery-spec{
+    float: left;display: block;
     background: #FFFFFF;
-    box-shadow: #05141b;
+    border-style: solid;
     border-radius: 16px;
-    margin: 4%;
-    padding: 2%;
+    margin: 1%;
+    padding: 1%;
 }
 #index-gallery-spec-title{
     color: #587897;
@@ -133,3 +143,7 @@ img{
 #index-gallery-spec-amount{
     color: #587897;
 }
+
+
+<!-- -------------------------------------------  Gallery  ------------------------------------------- -->
+
