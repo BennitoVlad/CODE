@@ -15,6 +15,7 @@ img{
 <!-- -------------------------------------------  Intro  ------------------------------------------- -->
 
 #index-intro-main-block{
+    float: left;
     padding: 10% 10% 10% 10%;
     width: 100%;
 }
@@ -42,6 +43,7 @@ img{
 
 
 #index-intro-second-block{
+    float: left;
     padding: 10% 10% 10% 10%;
     width: 100%;
 }
@@ -145,5 +147,94 @@ img{
 }
 
 
-<!-- -------------------------------------------  Gallery  ------------------------------------------- -->
+<!-- -------------------------------------------  Promotional  ------------------------------------------- -->
+#index__promotional__main-block{
+    padding: 10%;
+    width: 100%;
+}
+#index__promotional__card-block {
+    width: 100%;
+}
+.index__promotional__card {
+    float: left;
+    width: 21%;
+    margin: 1%;
+    padding: 1%;
+    border: 2px black solid;
+}
+#index__promotional__why-us-block{
+    width: 100%;
+    flex: initial;
+}
+#index__promotional__why-us-block__image-block{
+    float: left;
+    flex: initial;
+    width: 50%;
+}
+#index__promotional__why-us-block__info-block{
+    float: left;
+    flex: initial;
+    width: 50%;
+}
 
+
+<!-- -------------------------------------------  Projects  ------------------------------------------- -->
+
+#index-projects-main-block{
+    width: 100%;
+    padding: 10% 10% 10% 10%;
+}
+
+#index-projects-projtypes{
+    float: left;
+    width: 20%;
+}
+#index-projects-projtypes-list{}
+#index-projects-projtypes-list.ul{
+    margin: 1%;
+}
+
+#index-projects-picture-block{
+    float: left;
+    width: 80%;
+}
+#index-projects-secondary-linkbox{
+    float: left;
+    width: 100%;
+    border-right:2px solid black;
+    border-bottom:2px solid black;
+}
+
+#index-projects-specs{
+    float: left;
+    width: 100%;
+}
+.index-projects-spec{
+    float: left;display: block;
+    background: #FFFFFF;
+    border-style: solid;
+    border-radius: 16px;
+    margin: 1%;
+    padding: 1%;
+}
+#index-projects-spec-title{
+    color: #587897;
+}
+#index-projects-spec-amount{
+    color: #587897;
+}
+
+<!-- -------------------------------------------  Info  ------------------------------------------- -->
+
+#index-info__main{
+    padding: 10%;
+    width: 100%;
+}
+#index-info__left-half{
+    float: left;
+    width: 50%;
+}
+#index-info__right-half{
+    float: left;
+    width: 50%;
+}

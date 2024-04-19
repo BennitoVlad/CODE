@@ -21,6 +21,7 @@
 
 </div>
 <div id="index-intro-second-block">
+    <br/>
     <h1 class="centered-text">Як це працює</h1>
 
     <div class="index-numbered-box">

@@ -19,6 +19,9 @@
         <?php
             require ("../fragments/index-intro.php");
             require ("../fragments/index-gallery.php");
+            require ("../fragments/index-promotional.php");
+            require ("../fragments/index-projects.php");
+            require ("../fragments/index-info.php");
         ?>
     </body>
 
