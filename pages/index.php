@@ -3,6 +3,7 @@
     <head>
         <title>Main page</title>
         <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/index.css">
     </head>
     <body>
         <?php
@@ -12,7 +13,11 @@
             if(@$login){
                 ?><hr><?php
 
-            }
+             }
+        ?>
+
+        <?php
+            require ("../fragments/index-intro.php");
         ?>
     </body>
 
