@@ -46,3 +46,14 @@ body{
     border-radius: 16px;
     padding: 3%;
 }
+
+.rounded-image{
+    display: block;
+    max-width: 100%;
+    border-radius: 10%;
+}
+.smooth-image{
+    display: block;
+    max-width: 100%;
+    border-radius: 50%;
+}

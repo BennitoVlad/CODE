@@ -18,6 +18,7 @@
 
         <?php
             require ("../fragments/index-intro.php");
+            require ("../fragments/index-gallery.php");
         ?>
     </body>
 
