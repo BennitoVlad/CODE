@@ -19,8 +19,8 @@ $mfieldkeys = array_flip($mfieldlist);
 </head>
 <body>
 
-    <div id="register-block-main">
     <form action="register-action.php" method="post">
+        <div id="register-block-main">
         <?php
         if(array_key_exists('new_login', $mfieldkeys)){
             ?>
@@ -97,7 +97,7 @@ $mfieldkeys = array_flip($mfieldlist);
         ?>
 
             <button type="submit" class="block-label-blue" id="register-button">Register.</button>
+        </div>
     </form>
-    </div>
 </body>
 </html>
