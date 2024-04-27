@@ -1,5 +1,5 @@
+<h1 class="centered-text">Шукайте роботу серед 1816 відкритих фриланс-проєктів</h1>
 <div id="index-projects-main-block">
-    <h1 class="centered-text">Шукайте роботу серед 1816 відкритих фриланс-проєктів</h1>
     <div id="index-projects-projtypes">
         <ul id="index-projects-projtypes-list">
             <li><strong>Програмування</strong></li>
@@ -18,7 +18,10 @@
         </ul>
     </div>
 
-    <div id="index-projects-picture-block">
+    <div id="index-projects-secondary-block">
+        <div id="index-projects-picture-block">
+            <img src="../images/Women%20Programmer.jpeg.img.jpeg"/>
+        </div>
 
     </div>
 

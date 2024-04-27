@@ -12,7 +12,7 @@ img{
     max-width: 100%;
 }
 
-<!-- -------------------------------------------  Intro  ------------------------------------------- -->
+/* -------------------------------------------  Intro  ------------------------------------------- */
 
 #index-intro-main-block{
     float: left;
@@ -72,60 +72,88 @@ img{
     width: fit-content;
 }
 
-<!-- -------------------------------------------  Gallery  ------------------------------------------- -->
+/* -------------------------------------------  Gallery  ------------------------------------------- */
 
 #index-gallery-main-block{
     padding: 10% 10% 10% 10%;
     width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 1fr;
+
 }
 
 #index-gallery-projtypes{
     float: left;
-    width: 20%;
 }
-#index-gallery-projtypes-list{}
+/* #index-gallery-projtypes-list{} */
 #index-gallery-projtypes-list.ul{
     margin: 1%;
 }
 
 #index-gallery-freelancers{
     float: left;
-    width: 80%;
 }
 #index-gallery-freelancers-main-blocks{
     float: left;
-    width: 30%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 .index-gallery-freelancer-block{
+    aspect-ratio: 1;
     display: block;
     float: left;
     width: 94%;
     margin: 2%;
     border-right:2px solid black;
     border-bottom:2px solid black;
+    border-radius: 16px;
+}
+.index-gallery-freelancer-block img{
+    aspect-ratio: 1;
+    object-fit: fill;
+
+    width: 100%;
+    height: 100%;
 }
 #index-gallery-freelancers-secondary-blocks{
-    float: left;
-    width: 70%;
+    display: grid;
+    grid-template-rows: 4fr 1fr;
 }
 #index-gallery-secondary-pictures{
-    float: left;
-    width: 100%;
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 .index-gallery-secondary-picture{
+    aspect-ratio: 1;
     float: left;
     display: block;
-
-    width: 50%;
-    height: 25vh;
     margin: 0;
     padding: 0;
+}
+.index-gallery-secondary-picture img{
+    object-fit: fill;
+
+    width: 100%;
+    height: 100%;
 }
 #index-gallery-secondary-linkbox{
     float: left;
     width: 100%;
     border-right:2px solid black;
     border-bottom:2px solid black;
+    text-align: center;
+    border-radius: 16px;
+}
+#index-gallery-secondary-linkbox a{
+    vertical-align: center;
 }
 
 #index-gallery-specs{
@@ -147,56 +175,68 @@ img{
 }
 
 
-<!-- -------------------------------------------  Promotional  ------------------------------------------- -->
+/* -------------------------------------------  Promotional  ------------------------------------------- */
 #index__promotional__main-block{
     padding: 10%;
     width: 100%;
 }
 #index__promotional__card-block {
     width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 .index__promotional__card {
     float: left;
-    width: 21%;
     margin: 1%;
     padding: 1%;
     border: 2px black solid;
+    border-radius: 16px;
 }
 #index__promotional__why-us-block{
     width: 100%;
     flex: initial;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 #index__promotional__why-us-block__image-block{
     float: left;
     flex: initial;
-    width: 50%;
 }
 #index__promotional__why-us-block__info-block{
     float: left;
     flex: initial;
-    width: 50%;
 }
 
 
-<!-- -------------------------------------------  Projects  ------------------------------------------- -->
+/* -------------------------------------------  Projects  ------------------------------------------- */
 
 #index-projects-main-block{
     width: 100%;
     padding: 10% 10% 10% 10%;
+
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+#index-projects-secondary-block{
+    display: grid;
+    grid-template-rows: 4fr 1fr;
 }
 
 #index-projects-projtypes{
     float: left;
     width: 20%;
 }
-#index-projects-projtypes-list{}
+/* #index-projects-projtypes-list{} */
 #index-projects-projtypes-list.ul{
     margin: 1%;
 }
 
-#index-projects-picture-block{
+#index-projects-picture-block img{
     float: left;
-    width: 80%;
+    border-radius: 16px;
+    margin:  10% 0 0 0;
 }
 #index-projects-secondary-linkbox{
     float: left;
@@ -224,17 +264,17 @@ img{
     color: #587897;
 }
 
-<!-- -------------------------------------------  Info  ------------------------------------------- -->
+/* -------------------------------------------  Info  ------------------------------------------- */
 
 #index-info__main{
     padding: 10%;
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 #index-info__left-half{
     float: left;
-    width: 50%;
 }
 #index-info__right-half{
     float: left;
-    width: 50%;
 }

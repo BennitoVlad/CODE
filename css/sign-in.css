@@ -16,12 +16,8 @@ body{
     float: right;
     offset-position: 0 10px;
 }
-vector{
-    float: right;
-}
 input{
     opacity: 50%;
-    width: 40%;
     float: right;
     border-style: solid;
     border-color: #FFFFFF;

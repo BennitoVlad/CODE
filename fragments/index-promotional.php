@@ -46,8 +46,9 @@
             <h5>+213 за тиждень</h5>
         </div>
     </div>
-    <div id="index__promotional__why-us-block">
         <h2 class="centered-text"><strong>Чому фрилансери обирають Free</strong>lance</h2>
+
+    <div id="index__promotional__why-us-block">
         <div id="index__promotional__why-us-block__image-block">
             <img src="../images/шшш1.PNG"/>
         </div>

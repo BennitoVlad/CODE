@@ -23,6 +23,7 @@ $mfieldkeys = array_flip($mfieldlist);
     ?>
      <div id="sign-in-block-main">
         <form action="sign-in-action.php" method="post">
+            <div class="block-label-bordered" style="width: 100%">
             <?php
                 if(array_key_exists('login', $mfieldkeys)){
                     ?>
@@ -32,11 +33,11 @@ $mfieldkeys = array_flip($mfieldlist);
             <?php
                 }
             ?>
-            <div class="block-label-bordered">
                 <label for="login" class="block-label-white">Your login (E-mail address):</label>
                 <input name="login" id="login" type="text">
             </div>
             <br/>
+            <div class="block-label-bordered" style="width: 100%">
             <?php
             if(array_key_exists('password', $mfieldkeys)){
                 ?>
@@ -45,7 +46,6 @@ $mfieldkeys = array_flip($mfieldlist);
                 <?php
             }
             ?>
-            <div class="block-label-bordered">
                 <label for="password" class="block-label-white">Your password:</label>
                 <input name="password" id="password" type="password">
             </div>

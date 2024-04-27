@@ -13,7 +13,7 @@ body{
 #role{
     offset-position: 0 10px;
 }
-vector{
+input, select, textarea{
     float: right;
 }
 input{

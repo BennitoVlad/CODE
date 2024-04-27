@@ -29,7 +29,7 @@
     if($result = $stmt->get_result()){
         extract($result->fetch_assoc());
         ?>
-        <h2><?=$first_name?> <?=$first_name?></h2>
+        <h2><?=$first_name?> <?=$last_name?></h2>
 
         <p>You are a <strong><?=$role?></strong>.</p>
         <ul>
