@@ -49,6 +49,13 @@ body{
     border-radius: 16px;
     padding: 3%;
 }
+.block-label-red{
+    display: inline-block;
+    background: #F77858;
+    color: #FFFFFF;
+    border-radius: 16px;
+    padding: 3%;
+}
 input{
     display: inline-block;
 }
@@ -62,4 +69,19 @@ input{
     float: left;
     display: block;
     border-radius: 10%;
+}
+
+.transparent-input{
+    opacity: 50%;
+    border-style: solid;
+    border-color: #FFFFFF;
+    border-width: 2px;
+    border-radius: 16px;
+    padding: 3%;
+    margin: 0 0 0 0;
+
+}
+
+a{
+    text-decoration: none;
 }

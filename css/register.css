@@ -3,7 +3,7 @@ body{
 }
 #register-block-main{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     margin: 0 10% 0 10%;
     background: #d0daea;
     opacity: 90%;
