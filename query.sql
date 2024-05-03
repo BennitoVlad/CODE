@@ -28,7 +28,8 @@ CREATE TABLE Project(
                         projecttype_id INT,
                         FOREIGN KEY (projecttype_id) REFERENCES ProjectType(id),
                         sent_time DATETIME,
-                        completed BOOL
+                        completed BOOL,
+                        price DECIMAL check ( price > 0.01 )
 );
 
 CREATE TABLE Commentary(
@@ -40,3 +41,5 @@ CREATE TABLE Commentary(
                            text_data TEXT NOT NULL,
                            sent_time TIMESTAMP
 );
+
+DROP TABLE Project;

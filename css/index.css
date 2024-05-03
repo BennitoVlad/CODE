@@ -16,15 +16,15 @@ img{
 
 #index-intro-main-block{
     float: left;
-    padding: 10% 10% 10% 10%;
     width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 #index-intro-left-half{
-    width: 50%;
     float: left;
 }
 #index-intro-right-half{
-    width: 50%;
     float: left;
 
 }
@@ -44,7 +44,6 @@ img{
 
 #index-intro-second-block{
     float: left;
-    padding: 10% 10% 10% 10%;
     width: 100%;
 }
 .index-numbered-box{
@@ -53,7 +52,7 @@ img{
 }
 .index-numbered-box-content{
     width: 90%;
-    height: 8vh;
+    height: 16vh;
     border-radius: 16px;
     padding: 2%;
     z-index: 1001;
@@ -75,7 +74,6 @@ img{
 /* -------------------------------------------  Gallery  ------------------------------------------- */
 
 #index-gallery-main-block{
-    padding: 10% 10% 10% 10%;
     width: 100%;
 
     display: grid;
@@ -131,22 +129,24 @@ img{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
-.index-gallery-secondary-picture{
-    aspect-ratio: 1;
+.index-gallery-secondary-picture {
     float: left;
     display: block;
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
+div.index-gallery-secondary-picture {
+    aspect-ratio: 1;
+}
 .index-gallery-secondary-picture img{
-    object-fit: fill;
-
-    width: 100%;
-    height: 100%;
+    object-fit: cover;
 }
 #index-gallery-secondary-linkbox{
+    padding: 10%;
     float: left;
-    width: 100%;
+    display: block;
     border-right:2px solid black;
     border-bottom:2px solid black;
     text-align: center;
@@ -177,7 +177,6 @@ img{
 
 /* -------------------------------------------  Promotional  ------------------------------------------- */
 #index__promotional__main-block{
-    padding: 10%;
     width: 100%;
 }
 #index__promotional__card-block {
@@ -214,7 +213,6 @@ img{
 
 #index-projects-main-block{
     width: 100%;
-    padding: 10% 10% 10% 10%;
 
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -267,14 +265,15 @@ img{
 /* -------------------------------------------  Info  ------------------------------------------- */
 
 #index-info__main{
-    padding: 10%;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 #index-info__left-half{
+    padding: 4%;
     float: left;
 }
 #index-info__right-half{
+    padding: 4%;
     float: left;
 }
