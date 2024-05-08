@@ -33,7 +33,9 @@
     <a href="edit-project.php" class="block-label-blue">Редагувати</a>
     <input type="submit" value="Видалити" class="block-label-red"/>
 </form>
-
+<?php
+    include ("../fragments/commentary-form.php");
+?>
 
 </body>
 <?php

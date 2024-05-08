@@ -6,7 +6,18 @@ form{
     opacity: 90%;
     padding: 10%;
 }
-
+form.commentary{
+     display: grid;
+     grid-template-columns: repeat(1, 1fr);
+     margin: 0 10% 0 10%;
+     background: #d0daea;
+     opacity: 90%;
+     padding: 10%;
+ }
+form.commentary .double-row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
 .payment{
     display: grid;
     grid-template-columns: 5fr 1fr;
