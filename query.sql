@@ -28,6 +28,7 @@ CREATE TABLE Project(
                         projecttype_id INT,
                         FOREIGN KEY (projecttype_id) REFERENCES ProjectType(id),
                         sent_time DATETIME,
+                        published BOOL,
                         completed BOOL,
                         price DECIMAL check ( price > 0.01 )
 );
@@ -42,4 +43,18 @@ CREATE TABLE Commentary(
                            sent_time TIMESTAMP
 );
 
-DROP TABLE Project;
+-- DROP TABLE Project;
+
+INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Програмування');
+INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Дизайн та арт');
+INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Послуги');
+INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Аудіо та відео');
+INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Просування');
+INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Архітектура та інжиніринг');
+INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Мобільні додатки');
+INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Адміністрування');
+INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Аутсорсинг та консалтинг');
+INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Переклади');
+INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Робота з текстами');
+INSERT INTO `ProjectType` (`id`,`title`) VALUES ('3D-моделювання');
+INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Додрукарська підготовка');

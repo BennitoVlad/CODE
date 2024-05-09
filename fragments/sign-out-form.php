@@ -2,14 +2,17 @@
 if(@$login){
     ?>
     <form action="sign-out-action.php" method="post">
-        Logged-in user: <strong><?=$first_name?> <?=$last_name?></strong>
-        <button type="submit" name="submit" style="background-color: red">Sign out.</button>
-        <a href="user.php">Your profile</a>
+        <?=$MSG['user_current']?>: <strong><?=$first_name?> <?=$last_name?></strong>
+        <button type="submit" name="submit" style="background-color: red"><?=$MSG['user_log_out']?></button>
+        <a href="user.php"><?=$MSG['user_profile']?></a>
     </form>
     <?php
 }
 else {
-    ?>You are currently logged out. <a href="sign-in.php">Sign in</a> or <a href="register.php">sign up</a>.
+    ?><?=$MSG['user_unknown']?>
+    <a href="sign-in.php"><?=$MSG['user_sign_in']?></a>
+    <?=$MSG['user_sign_or']?>
+    <a href="register.php"><?=$MSG['user_sign_up']?></a>.
 <?php
 }
 ?>

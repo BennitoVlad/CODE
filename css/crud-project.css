@@ -22,7 +22,10 @@ form.commentary .double-row{
     display: grid;
     grid-template-columns: 5fr 1fr;
 }
-
+label#currency {
+    text-align: center;
+    align-content: center;
+}
 body{
     background: #FFFFFF;
 }

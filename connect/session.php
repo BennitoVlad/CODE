@@ -1,5 +1,6 @@
 <?php
 require_once("../connect/database.php");
+require_once("../connect/language.php");
 
 unset($login);
 unset($login_id);
