@@ -24,7 +24,7 @@ function display_projects_or($rows) {
     }
 }
 
-if($is_contractor) {
+if($is_contractor) {    //  Contractor.
     $mine = $mysqli->prepare(PROJECT_QUERY . " WHERE contractor_id=? AND completed=?");
     $comp = 0;
     ?><h1><?=$MSG['projects_your']?></h1><?php
@@ -33,6 +33,12 @@ if($is_contractor) {
     $mine->bind_param("ii", $login_id, $comp); // binding is by reference!
     $mine->execute();
     display_projects_or($mine->get_result());
+
+
+    //var_dump($is_contractor);
+    //die();
+
+
     // my bids (open)
     ?><h2><?=$MSG['projects_offered']?></h2><?php
     $open = $mysqli->prepare(
@@ -95,7 +101,8 @@ if($is_contractor) {
         }
         ?></ul><?php
     }
-} else {
+}
+else {  //  Client.
     ?><a href="add-project.php"><?=$MSG['project_post']?></a><?php
     // my projects (open, completed)
     $stmt = $mysqli->prepare(PROJECT_QUERY . " WHERE client_id=? AND completed=?");

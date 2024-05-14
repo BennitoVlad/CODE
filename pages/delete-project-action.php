@@ -15,6 +15,11 @@ if(!$login || !$id) {
 
     if($is_delete_op || $is_revoke_op) {
         if($is_delete_op) {
+            $stmt = $mysqli->prepare("DELETE FROM Commentary WHERE project_id=?");
+            $stmt->bind_param("i", $id);
+            $stmt->execute();
+                //  Not supposed to break.
+
             $stmt = $mysqli->prepare("DELETE FROM Project WHERE id=? AND client_id=?");
         } else {
             $stmt = $mysqli->prepare("UPDATE Project SET contractor_id=NULL WHERE id=? AND client_id=?");

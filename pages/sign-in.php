@@ -33,8 +33,10 @@ $mfieldkeys = array_flip($mfieldlist);
             <?php
                 }
             ?>
+                <div class="double-row">
                 <label for="login" class="block-label-white">Your login (E-mail address):</label>
                 <input name="login" id="login" type="text">
+            </div>
             </div>
             <br/>
             <div class="block-label-bordered" style="width: 100%">
@@ -46,8 +48,10 @@ $mfieldkeys = array_flip($mfieldlist);
                 <?php
             }
             ?>
+                <div class="double-row">
                 <label for="password" class="block-label-white">Your password:</label>
                 <input name="password" id="password" type="password">
+            </div>
             </div>
             <button type="submit" class="block-label-blue" id="sign-in-button">Sign in.</button>
         </form>

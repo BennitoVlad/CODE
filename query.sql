@@ -28,7 +28,7 @@ CREATE TABLE Project(
                         projecttype_id INT,
                         FOREIGN KEY (projecttype_id) REFERENCES ProjectType(id),
                         sent_time DATETIME,
-                        completed BOOL NOT NULL,
+                        completed BOOL,
                         price DECIMAL check ( price > 0.01 )
 );
 
@@ -55,3 +55,6 @@ INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Переклади');
 INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Робота з текстами');
 INSERT INTO `ProjectType` (`id`,`title`) VALUES ('3D-моделювання');
 INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Додрукарська підготовка');
+
+ALTER TABLE Project
+    MODIFY COLUMN completed BOOL DEFAULT FALSE;
