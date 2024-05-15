@@ -4,6 +4,7 @@ $missing = @$_GET['missing'];
 $mfieldlist = explode(" ", $missing);
 $mfieldkeys = array_flip($mfieldlist);
 
+require("../fragments/top-pane.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

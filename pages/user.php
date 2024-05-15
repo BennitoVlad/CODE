@@ -7,7 +7,13 @@
 <body>
     <?php
         require_once("../connect/session.php");
+
+
+        require("../fragments/top-pane.php");
+
         require("../fragments/sign-out-form.php");
+
+
 
         $missing = @$_GET['missing'];
         $mfieldlist = explode(" ", $missing);

@@ -7,6 +7,7 @@ $PRJ = retrieve_project($id);
 check_auth_or_redirect($PRJ && $login_id == $PRJ['client_id']);
 $PRJ = array_map("htmlspecialchars", $PRJ);
 
+require("../fragments/top-pane.php");
 ?>
 <!DOCTYPE html>
 <html lang="uk">

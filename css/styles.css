@@ -27,6 +27,7 @@ body{
 } */
 
 .block-label-bordered{
+    text-decoration: none;
     display: inline-block;
     border-color: #FFFFFF;
     border-width: 2px;
@@ -37,6 +38,7 @@ body{
 }
 
 .block-label-white{
+    text-decoration: none;
     display: inline-block;
     background: #FFFFFF;
     color: #000000;
@@ -44,6 +46,7 @@ body{
     padding: 3%;
 }
 .block-label-blue{
+    text-decoration: none;
     display: inline-block;
     background: #587897;
     color: #FFFFFF;
@@ -51,6 +54,7 @@ body{
     padding: 3%;
 }
 .block-label-red{
+    text-decoration: none;
     display: inline-block;
     background: #F77858;
     color: #FFFFFF;

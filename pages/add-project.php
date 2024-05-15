@@ -4,6 +4,7 @@ require_once("../fragments/vignettes.php");
 
 check_auth_or_redirect($is_customer);
 
+require("../fragments/top-pane.php");
 ?>
 <!DOCTYPE html>
 <html lang="uk">

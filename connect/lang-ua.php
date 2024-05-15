@@ -51,5 +51,17 @@ $MSG = Array(
 
     'yes' => "Так",
     'no' => "Ні",
+
+    'for_contractors' => "Фрилансерам",
+    'for_clients' => "Замовникам",
+
+    'the_login' => "Вхід",
+    'the_registration' => "Реєстрація",
+
+    'my_projects' => "Мої завдання",
+    'find_project' => "Знайти замовлення",
+    'projects' => "Проєкти",
+    'contractors' => "Фрилансери",
+    'new_project' => "+ Нове замовлення",
 );
 ?>
