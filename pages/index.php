@@ -11,7 +11,6 @@ require_once("../connect/session.php");
     <body>
         <?php
             require("../fragments/top-pane.php");
-            require("../fragments/sign-out-form.php");
 
             if(@$login){
                 require("../fragments/dashboard.php");

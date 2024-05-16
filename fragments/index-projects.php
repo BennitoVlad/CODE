@@ -1,6 +1,6 @@
 <h1 class="centered-text">Шукайте роботу серед 1816 відкритих фриланс-проєктів</h1>
 <div id="index-projects-main-block">
-    <div id="index-projects-projtypes">
+    <div id="index-projects-projtypes" class=" block-label-white">
         <ul id="index-projects-projtypes-list">
             <li><strong>Програмування</strong></li>
             <li>Дизайн та арт</li>
@@ -23,7 +23,6 @@
             <img src="../images/Women%20Programmer.jpeg.img.jpeg"/>
         </div>
 
-    </div>
 
     <h4 class="centered-text">Топ спеціалізацій:</h4>
     <div id="index-projects-specs">
@@ -71,6 +70,8 @@
             <span class="index-projects-spec-title">Дивитись всі</span>
             <span class="index-projects-spec-amount">-></span>
         </div>
+    </div>
+
     </div>
 </div>
 

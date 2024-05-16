@@ -1,5 +1,5 @@
 body{
-    background: #FFFFFF;
+    background: #D6DFED;
     font-family: sans-serif;
 }
 
@@ -18,8 +18,10 @@ body{
 .errmsg{
     border-radius: 4px;
     margin: 0 4px 0 4px;
-    background-color: #FFAAAA;
+    background-color: #FFAFAF;
     font-size: smaller;
+    padding: 2%;
+    border-radius: 16px;
 }
 /*.warning-label{
     background-color: #DDAAAA;
@@ -30,6 +32,19 @@ body{
     text-decoration: none;
     display: inline-block;
     border-color: #FFFFFF;
+    background: #FFFFFF;
+    border-width: 2px;
+    border-radius: 16px;
+    border-style: solid;
+    /* padding: 2%; */
+    margin: 2%;
+}
+
+.block-label-bordered-black{
+    text-decoration: none;
+    display: inline-block;
+    border-color: #000000;
+    background: #FFFFFF;
     border-width: 2px;
     border-radius: 16px;
     border-style: solid;

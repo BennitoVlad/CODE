@@ -1,21 +1,23 @@
 body{
-    background: #FFFFFF;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 #register-block-main{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
     margin: 0 10% 0 10%;
     background: #d0daea;
     opacity: 90%;
-    padding: 10%;
-
+    padding: 10% 5% 10% 5%;
 }
+#register-block-picture img{
+
+    padding: 10% 5% 10% 5%;
+    height: 40%;
+}
+
 #role{
     offset-position: 0 10px;
 }
-input, select, textarea{
-    float: right;
-}
+
 input{
     opacity: 50%;
     border-style: solid;
@@ -27,6 +29,5 @@ input{
 
 }
 #register-button{
-    margin: 10% 0 0 0;
-    padding: 3% 0 3% 0;
+    width: 100%;
 }

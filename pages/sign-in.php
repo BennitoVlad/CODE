@@ -4,7 +4,6 @@ $failed = @$_GET['failed'];
 $mfieldlist = explode(" ", $missing);
 $mfieldkeys = array_flip($mfieldlist);
 
-require("../fragments/top-pane.php");
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +15,8 @@ require("../fragments/top-pane.php");
     </head>
 
     <body>
+    <div id="sign-in-block-main">
+        <form action="sign-in-action.php" method="post">
      <?php
         if ($failed){
             ?>
@@ -23,9 +24,6 @@ require("../fragments/top-pane.php");
         <?php
         }
     ?>
-     <div id="sign-in-block-main">
-        <form action="sign-in-action.php" method="post">
-            <div class="block-label-bordered" style="width: 100%">
             <?php
                 if(array_key_exists('login', $mfieldkeys)){
                     ?>
@@ -39,9 +37,7 @@ require("../fragments/top-pane.php");
                 <label for="login" class="block-label-white">Your login (E-mail address):</label>
                 <input name="login" id="login" type="text">
             </div>
-            </div>
             <br/>
-            <div class="block-label-bordered" style="width: 100%">
             <?php
             if(array_key_exists('password', $mfieldkeys)){
                 ?>
@@ -54,9 +50,11 @@ require("../fragments/top-pane.php");
                 <label for="password" class="block-label-white">Your password:</label>
                 <input name="password" id="password" type="password">
             </div>
-            </div>
             <button type="submit" class="block-label-blue" id="sign-in-button">Sign in.</button>
         </form>
      </div>
+    <div id="sign-in-block-picture" class="centered-text">
+        <img src="../images/цвеееет.png">
+    </div>
     </body>
 </html>

@@ -23,12 +23,13 @@
 <div id="index-intro-second-block">
     <br/>
     <h1 class="centered-text">Як це працює</h1>
+<div id="index-intro-second-block-boxes">
 
     <div class="index-numbered-box">
         <div class="index-number-box">1</div>
         <div class="index-numbered-box-content">
             <h6 class="centered-text">
-                Опублікуйте проєкт <br/>
+                Опублікуйте проєкт
                 безкоштовно, щоб знайти <br/>
                 фрилансера
             </h6>
@@ -60,6 +61,7 @@
                 та завершіть проєкт.
             </h6>
         </div>
+    </div>
     </div>
     <span class="centered-text">
         <img id="security-image" src="../images/png-transparent-information-privacy-data-protection-directive--data-brand.png" alt="Another image.">

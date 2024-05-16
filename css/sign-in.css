@@ -1,20 +1,15 @@
 body{
-    background: #FFFFFF;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 #sign-in-block-main{
-    float: left;
     margin: 0 10% 0 10%;
     background: #d0daea;
     opacity: 90%;
-    padding: 10%;
-
-    height: 100vh;
-    width: fit-content;
-
+    padding: 10% 5% 10% 5%;
 }
-#role{
-    float: right;
-    offset-position: 0 10px;
+#sign-in-block-picture{
+
 }
 input{
     opacity: 50%;

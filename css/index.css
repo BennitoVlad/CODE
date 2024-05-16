@@ -15,8 +15,7 @@ img{
 /* -------------------------------------------  Intro  ------------------------------------------- */
 
 #index-intro-main-block{
-    float: left;
-    width: 100%;
+    padding: 5% 10% 5% 10%;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -42,17 +41,16 @@ img{
 }
 
 
-#index-intro-second-block{
-    float: left;
-    width: 100%;
+#index-intro-second-block{}
+#index-intro-second-block-boxes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
+
 .index-numbered-box{
-    float: left;
-    width: 25%;
 }
 .index-numbered-box-content{
-    width: 90%;
-    height: 16vh;
+    background: #FFFFFF;
     border-radius: 16px;
     padding: 2%;
     z-index: 1001;
@@ -74,13 +72,22 @@ img{
 /* -------------------------------------------  Gallery  ------------------------------------------- */
 
 #index-gallery-main-block{
-    width: 100%;
+    padding: 5% 10% 5% 10%;
+
 
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
     grid-template-rows: 1fr;
 
 }
+#index-gallery-secondary-block{
+     padding: 0 10% 0 10%;
+
+
+     display: grid;
+     grid-template-columns: 1fr 3fr;
+
+ }
 
 #index-gallery-projtypes{
     float: left;
@@ -100,6 +107,7 @@ img{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+
 }
 .index-gallery-freelancer-block{
     aspect-ratio: 1;
@@ -110,7 +118,8 @@ img{
     border-right:2px solid black;
     border-bottom:2px solid black;
     border-radius: 16px;
-}
+
+    }
 .index-gallery-freelancer-block img{
     aspect-ratio: 1;
     object-fit: fill;
@@ -121,6 +130,8 @@ img{
 #index-gallery-freelancers-secondary-blocks{
     display: grid;
     grid-template-rows: 4fr 1fr;
+
+    padding: 2%;
 }
 #index-gallery-secondary-pictures{
 
@@ -128,6 +139,8 @@ img{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+
+    padding: 2%;
 }
 .index-gallery-secondary-picture {
     float: left;
@@ -135,7 +148,7 @@ img{
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 0;
+
 }
 div.index-gallery-secondary-picture {
     aspect-ratio: 1;
@@ -177,64 +190,74 @@ div.index-gallery-secondary-picture {
 
 /* -------------------------------------------  Promotional  ------------------------------------------- */
 #index__promotional__main-block{
-    width: 100%;
+
+    padding: 5% 10% 5% 10%;
 }
 #index__promotional__card-block {
-    width: 100%;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 .index__promotional__card {
     float: left;
     margin: 1%;
     padding: 1%;
     border: 2px black solid;
+    background: #FFFFFF;
     border-radius: 16px;
 }
 #index__promotional__why-us-block{
-    width: 100%;
     flex: initial;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 20% 0 20%;
+
 }
 #index__promotional__why-us-block__image-block{
     float: left;
     flex: initial;
+
 }
 #index__promotional__why-us-block__info-block{
     float: left;
     flex: initial;
+
+    padding: 5%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+#index__promotional__why-us-block__info-block .block-label-bordered-black{
+    padding: 25%;
 }
 
 
 /* -------------------------------------------  Projects  ------------------------------------------- */
 
 #index-projects-main-block{
-    width: 100%;
 
     display: grid;
     grid-template-columns: 1fr 3fr;
+
+    padding: 5% 10% 5% 10%;
 }
 #index-projects-secondary-block{
     display: grid;
     grid-template-rows: 4fr 1fr;
+    padding: 2%;
 }
 
 #index-projects-projtypes{
     float: left;
-    width: 20%;
+    padding: 2%;
 }
 /* #index-projects-projtypes-list{} */
 #index-projects-projtypes-list.ul{
-    margin: 1%;
 }
 
 #index-projects-picture-block img{
-    float: left;
     border-radius: 16px;
-    margin:  10% 0 0 0;
+    height: auto;
 }
 #index-projects-secondary-linkbox{
     float: left;
@@ -244,9 +267,7 @@ div.index-gallery-secondary-picture {
 }
 
 #index-projects-specs{
-    float: left;
-    width: 100%;
-}
+    }
 .index-projects-spec{
     float: left;display: block;
     background: #FFFFFF;
@@ -265,7 +286,8 @@ div.index-gallery-secondary-picture {
 /* -------------------------------------------  Info  ------------------------------------------- */
 
 #index-info__main{
-    width: 100%;
+    padding: 5% 10% 5% 10%;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -276,4 +298,12 @@ div.index-gallery-secondary-picture {
 #index-info__right-half{
     padding: 4%;
     float: left;
+}
+
+
+
+
+
+#index-faq__main {
+    padding: 5% 10% 5% 10%;
 }

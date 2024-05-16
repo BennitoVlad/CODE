@@ -1,6 +1,6 @@
 <h1 class="centered-text">Вибирайте перевірених спеціалістів</h1>
 <div id="index-gallery-main-block">
-    <div id="index-gallery-projtypes">
+    <div id="index-gallery-projtypes" class="block-label-white">
         <ul id="index-gallery-projtypes-list">
             <li><strong>Програмування</strong></li>
             <li>Дизайн та арт</li>
@@ -19,20 +19,20 @@
     </div>
 
         <div id="index-gallery-freelancers-main-blocks">
-            <div class="index-gallery-freelancer-block">
+                <div class="index-gallery-freelancer-block block-label-white" >
                  <img class="smooth-image" src="../images/Bite%20me!.jpg" alt="Suddenly, Uzi."/>
                 <span><strong>Uzi</strong></span>
                 <h6>bottom text</h6>
             </div>
-            <div class="index-gallery-freelancer-block">
+            <div class="index-gallery-freelancer-block block-label-white">
                 <img class="smooth-image" src="../images/DSCN0480.JPG" alt="Suddenly, Kate."/>
                 <span><strong>Kate</strong></span>
                 <h6>bottom text</h6>
             </div>
         </div>
         <div id="index-gallery-freelancers-secondary-blocks">
-            <div id="index-gallery-secondary-pictures">
-                <div class="index-gallery-secondary-picture">
+            <div id="index-gallery-secondary-pictures" >
+                <div class="index-gallery-secondary-picture ">
                     <img src="../images/79f8e609de5501f933907954ab63a2de.jpg.png" class="index-gallery-secondary-picture rounded-image">
                 </div>
                 <div class="index-gallery-secondary-picture">
@@ -45,13 +45,14 @@
                     <img src="../images/31_1x%20(1).jpg" class="index-gallery-secondary-picture smooth-image">
                 </div>
             </div>
-            <div id="index-gallery-secondary-linkbox">
+            <div id="index-gallery-secondary-linkbox " class="block-label-bordered-black centered-text" style="padding: 2%">
                 <a>11 343 Програмісти</a>
             </div>
         </div>
 
 
 </div>
+<div id="index-gallery-secondary-block">
 
 <h4 class="centered-text">Топ спеціалізацій:</h4>
 <div id="index-gallery-specs">
@@ -99,4 +100,5 @@
         <span class="index-gallery-spec-title">Дивитись всі</span>
         <span class="index-gallery-spec-amount">-></span>
     </div>
+</div>
 </div>

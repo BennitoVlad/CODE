@@ -1,6 +1,11 @@
+
+                    <!--    Obsolete. Replaced by fragments/top-pane.php.   -->
+
 <?php
 if(@$login){
     ?>
+
+
     <form action="sign-out-action.php" method="post">
         <?=$MSG['user_current']?>: <strong><?=$first_name?> <?=$last_name?></strong>
         <button type="submit" name="submit" style="background-color: red"><?=$MSG['user_log_out']?></button>
@@ -16,4 +21,3 @@ else {
 <?php
 }
 ?>
-<hr>

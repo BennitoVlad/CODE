@@ -4,7 +4,6 @@ $missing = @$_GET['missing'];
 $mfieldlist = explode(" ", $missing);
 $mfieldkeys = array_flip($mfieldlist);
 
-require("../fragments/top-pane.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,9 +19,9 @@ require("../fragments/top-pane.php");
 </head>
 <body>
 
+<div id="register-block-main">
+
     <form action="register-action.php" method="post">
-        <div id="register-block-main">
-        <div class="block-label-bordered">
         <?php
         if(array_key_exists('new_login', $mfieldkeys)){
             ?>
@@ -40,14 +39,12 @@ require("../fragments/top-pane.php");
             
             <?php
         }?>
-            <div class="double-row">
-            <label for="new_login" class="block-label-white">Your login (E-mail):</label>
-            <input name="new_login" id="login" type="text"/>
+            <div class="double-row"  style="margin: 2%">
+                <label for="login" class="block-label-white">Your login (E-mail):</label>
+                <input name="new_login" id="login" type="text"/>
             </div>
-        </div>
-        
 
-        <div class="block-label-bordered">
+
         <?php
         if(array_key_exists('first_name', $mfieldkeys)){
         ?>
@@ -57,13 +54,11 @@ require("../fragments/top-pane.php");
         
         <?php
         }?>
-            <div class="double-row">
-            <label for="first_name" class="block-label-white">Your first name:</label>
-            <input name="first_name" id="first_name" type="text">
-        </div>
-        </div>
+            <div class="double-row" style="margin: 2%">
+                <label for="first_name" class="block-label-white">Your first name:</label>
+                <input name="first_name" id="first_name" type="text">
+            </div>
 
-        <div class="block-label-bordered">
         <?php
         if(array_key_exists('last_name', $mfieldkeys)){
             ?>
@@ -73,14 +68,12 @@ require("../fragments/top-pane.php");
             
             <?php
         }?>
-            <div class="double-row">
-            <label for="last_name" class="block-label-white">Your last name:</label>
-            <input name="last_name" id="last_name" type="text">
-        </div>
-        </div>
+            <div class="double-row" style="margin: 2%">
+                <label for="last_name" class="block-label-white">Your last name:</label>
+                <input name="last_name" id="last_name" type="text">
+            </div>
 
 
-        <div class="block-label-bordered">
         <?php
         if(array_key_exists('role', $mfieldkeys)){
             ?>
@@ -90,14 +83,13 @@ require("../fragments/top-pane.php");
             
             <?php
         }?>
-            <div class="double-row">
-            <label for="role" class="block-label-white">Who are you?</label>
-            <select name="role" id="role" class="block-label-blue">
-                <option value="contractor">Freelancer</option>
-                <option value="client">Client</option>
-            </select>
-        </div>
-        </div>
+            <div class="double-row" style="margin: 2%">
+                <label for="role" class="block-label-white">Who are you?</label>
+                <select name="role" id="role" class="block-label-blue">
+                    <option value="contractor">Freelancer</option>
+                    <option value="client">Client</option>
+                </select>
+            </div>
 
 
         <?php
@@ -105,7 +97,10 @@ require("../fragments/top-pane.php");
         ?>
 
             <button type="submit" class="block-label-blue" id="register-button">Register.</button>
-        </div>
     </form>
+</div>
+<div id="register-block-picture" class="centered-text">
+    <img src="../images/xSKQKrUdIшетер1E.AIT)%20копия.png">
+</div>
 </body>
 </html>

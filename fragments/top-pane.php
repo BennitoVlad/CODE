@@ -23,8 +23,10 @@ if(!@$login){   //  Basic panel.
         <a style="text-decoration: none; color: black" href=""><?=$MSG['my_projects']?></a>
         <div style="display: grid; grid-template-columns: 3fr repeat(3, 1fr)">
             <a class="block-label-blue" href=""><?=$MSG['find_project']?></a>
-            <span class="block-label-white">N/A</span>
-            <span class="block-label-white">N/A</span>
+            <form action="sign-out-action.php" method="post">
+                <button type="submit" name="submit" class="block-label-red" style="padding: 8%"><?=$MSG['user_log_out']?></button>
+            </form>
+            <a href="user.php" class="block-label-blue" style="padding: 8%"><?=$MSG['user_profile']?></a>
             <span class="block-label-white">N/A</span>
         </div>
     </div>
@@ -38,8 +40,10 @@ if(!@$login){   //  Basic panel.
         <a style="text-decoration: none; color: black" href=""><?=$MSG['contractors']?></a>
         <div style="display: grid; grid-template-columns: 3fr repeat(3, 1fr)">
             <a class="block-label-blue" href="../pages/add-project.php"><?=$MSG['new_project']?></a>
-            <span class="block-label-white">N/A</span>
-            <span class="block-label-white">N/A</span>
+            <form action="sign-out-action.php" method="post">
+                <button type="submit" name="submit" class="block-label-red" style="padding: 8%"><?=$MSG['user_log_out']?></button>
+            </form>
+            <a href="user.php" class="block-label-blue" style="padding: 8%"><?=$MSG['user_profile']?></a>
             <span class="block-label-white">N/A</span>
         </div>
     </div>

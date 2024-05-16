@@ -10,4 +10,4 @@ if($login){
     $stmt->execute();
 }
 
-header("Location: http://$host$uri/sign-in.php");
+header("Location: http://$host$uri/index.php");
