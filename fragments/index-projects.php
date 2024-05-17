@@ -2,19 +2,16 @@
 <div id="index-projects-main-block">
     <div id="index-projects-projtypes" class=" block-label-white">
         <ul id="index-projects-projtypes-list">
-            <li><strong>Програмування</strong></li>
-            <li>Дизайн та арт</li>
-            <li>Послуги</li>
-            <li>Аудіо та відео</li>
-            <li>Просування</li>
-            <li>Архітектура та інжиніринг</li>
-            <li>Мобільні додатки</li>
-            <li>Адміністрування</li>
-            <li>Аутсорсинг та консалтинг</li>
-            <li>Переклади</li>
-            <li>Робота з текстами</li>
-            <li>3D-моделювання</li>
-            <li>Додрукарська підготовка</li>
+            <?php
+            $stmt = $mysqli->prepare("SELECT id, title FROM ProjectType;");
+            $stmt->execute();
+            $result = $stmt->get_result();
+            while ($TYPE = $result->fetch_assoc()){
+                ?>
+                <li><a href="index.php?cat=<?=$TYPE['id']?>"><?=$TYPE['title']?></a></li>
+                <?php
+            }
+            ?>
         </ul>
     </div>
 

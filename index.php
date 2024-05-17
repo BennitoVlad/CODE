@@ -1,3 +1,10 @@
+<?php
+$host = $_SERVER['HTTP_HOST'];
+$uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+
+header("Location: http://$host$uri/pages/index.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
