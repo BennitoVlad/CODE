@@ -3,7 +3,7 @@ $missing = @$_GET['missing'];
 $failed = @$_GET['failed'];
 $mfieldlist = explode(" ", $missing);
 $mfieldkeys = array_flip($mfieldlist);
-
+require("../connect/language.php")
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ $mfieldkeys = array_flip($mfieldlist);
      <?php
         if ($failed){
             ?>
-            <p class="errmsg">Given combination of the login name and the password you entered matches no registered user.</p>
+            <p class="errmsg"><?=$MSG['mismatch_lp']?></p>
         <?php
         }
     ?>
@@ -28,29 +28,29 @@ $mfieldkeys = array_flip($mfieldlist);
                 if(array_key_exists('login', $mfieldkeys)){
                     ?>
                         <div class="warning-label">
-                            <label class="errmsg">'Login' field needs to be filled in.</label>
+                            <label class="errmsg"><?=$MSG['fill_in']?></label>
                         </div>
             <?php
                 }
             ?>
                 <div class="double-row">
-                <label for="login" class="block-label-white">Your login (E-mail address):</label>
+                <label for="login" class="block-label-white"><?=$MSG['your_login']?></label>
                 <input name="login" id="login" type="text">
             </div>
             <br/>
             <?php
             if(array_key_exists('password', $mfieldkeys)){
                 ?>
-                <label class="errmsg">'Password' field needs to be filled in.</label>
+                <label class="errmsg"><?=$MSG['fill_in']?></label>
                 <br/>
                 <?php
             }
             ?>
                 <div class="double-row">
-                <label for="password" class="block-label-white">Your password:</label>
+                <label for="password" class="block-label-white"><?=$MSG['your_password']?></label>
                 <input name="password" id="password" type="password">
             </div>
-            <button type="submit" class="block-label-blue" id="sign-in-button">Sign in.</button>
+            <button type="submit" class="block-label-blue" id="sign-in-button"><?=$MSG['the_login']?></button>
         </form>
      </div>
     <div id="sign-in-block-picture" class="centered-text">

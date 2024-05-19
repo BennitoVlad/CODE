@@ -11,7 +11,6 @@
 
         require("../fragments/top-pane.php");
 
-        require("../fragments/sign-out-form.php");
 
 
 
@@ -19,7 +18,6 @@
         $mfieldlist = explode(" ", $missing);
         $mfieldkeys = array_flip($mfieldlist);
     ?>
-    <a href="index.php">Back to main page</a>
     <?php
     if(array_key_exists("id", $_GET)){
         $id = 0 + $_GET['id'];
@@ -35,86 +33,89 @@
     if($result = $stmt->get_result()){
         extract($result->fetch_assoc());
         ?>
-        <h2><?=$first_name?> <?=$last_name?></h2>
+        <h2 class="centered-text"><?=$first_name?> <?=$last_name?></h2>
 
-        <p>You are a <strong><?=$role?></strong>.</p>
-        <ul>
-            <li>Login (E-mail): <?=$userlogin?></li>
-
+        <p class="centered-text"><?=$MSG['you_are']?> <strong><?=$MSG[$role]?></strong>.</p>
+        <div class="double-row">
+            <div class="centered-text block-label-bordered-black" style="padding: 2%"><?=$MSG['your_login']?></div>
+            <div class="centered-text block-label-bordered-black" style="padding: 2%;"><?=$userlogin?></div>
+        </div>
         <?php
 
-        if($role='contractor'){
-            $stmt = $mysqli->prepare("SELECT COUNT(*) FROM Project WHERE contractor_id = ?;");
-            $stmt->bind_param("i", $id);
-            $stmt->execute();
-            $undertaken_projects = $stmt->get_result()->fetch_row()[0];
+            if($role='contractor'){
+                $stmt = $mysqli->prepare("SELECT COUNT(*) FROM Project WHERE contractor_id = ?;");
+                $stmt->bind_param("i", $id);
+                $stmt->execute();
+                $undertaken_projects = $stmt->get_result()->fetch_row()[0];
 
-            $stmt = $mysqli->prepare("SELECT COUNT(*) FROM Project WHERE contractor_id = ? AND completed = TRUE;");
-            $stmt->bind_param("i", $id);
-            $stmt->execute();
-            $finished_projects = $stmt->get_result()->fetch_row()[0];
+                $stmt = $mysqli->prepare("SELECT COUNT(*) FROM Project WHERE contractor_id = ? AND completed = TRUE;");
+                $stmt->bind_param("i", $id);
+                $stmt->execute();
+                $finished_projects = $stmt->get_result()->fetch_row()[0];
 
-            ?>
-                <!-- Add a whole list of projects when projects will exist, damn it!-->
+                ?>
+                    <!-- Add a whole list of projects when projects will exist, damn it!-->
+                    <div class="double-row">
+                        <div class="block-label-bordered-black centered-text" style="padding: 2%"><?=$MSG['projects_open']?>: <?=$undertaken_projects?></div>
+                        <div class="block-label-bordered-black centered-text" style="padding: 2%"><?=$MSG['projects_completed']?>: <?=$finished_projects?></div>
+                    </div>
+                <?php
+            }
 
-                <li>Undertaken projects: <?=$undertaken_projects?></li>
-                <li>Finished projects: <?=$finished_projects?></li>
+            else{
+                $stmt = $mysqli->prepare("SELECT COUNT(*) FROM Project WHERE client_id = ?;");
+                $stmt->bind_param("i", $id);
+                $stmt->execute();
+                $projects_posted = $stmt->get_result()->fetch_row()[0];
 
-            <?php
-        }
+                $stmt = $mysqli->prepare("SELECT COUNT(*) FROM Project WHERE client_id = ? AND completed = TRUE;");
+                $stmt->bind_param("i", $id);
+                $stmt->execute();
+                $had_projects_finished = $stmt->get_result()->fetch_row()[0];
 
-        else{
-            $stmt = $mysqli->prepare("SELECT COUNT(*) FROM Project WHERE client_id = ?;");
-            $stmt->bind_param("i", $id);
-            $stmt->execute();
-            $projects_posted = $stmt->get_result()->fetch_row()[0];
+                ?>
 
-            $stmt = $mysqli->prepare("SELECT COUNT(*) FROM Project WHERE client_id = ? AND completed = TRUE;");
-            $stmt->bind_param("i", $id);
-            $stmt->execute();
-            $had_projects_finished = $stmt->get_result()->fetch_row()[0];
-
-            ?>
-                <!-- Add a whole list of projects when projects will exist, damn it!-->
-
-                <li>Projects posted: <?=$projects_posted?></li>
-                <li>Of them are finished: <?=$had_projects_finished?></li>
-
-            <?php
-        }
+                    <div class="double-row">
+                        <div class="block-label-bordered-black centered-text" style="padding: 2%"><?=$MSG['projects_open']?>: <?=$projects_posted?></div>
+                        <div class="block-label-bordered-black centered-text" style="padding: 2%"><?=$MSG['projects_completed']?>: <?=$had_projects_finished?></div>
+                    </div>
+                <?php
+            }
         ?>
-            </ul>
-            <img src="" alt="Profile image.">
+            <div class="centered-text">
+                <img style="max-width: 25%" src="" alt="Profile image.">
+            </div>
         <?php
 
         if($login_id == $id){
             ?>
-                This is you.
+            <blockquote>
+                <form action="change-image-action.php" method="POST" class="centered-text">
+                    <input type="hidden" name="user_id" value="<?=$id?>"/>
+                    <?php
+                        require("../fragments/image-change.php");
+                    ?>
+                    <button type="submit" class="block-label-blue"><?=$MSG['change_i']?></button>
+                </form>
+            </blockquote>
+
+            <h2 class="centered-text"><?=$MSG['this_is_you']?></h2>
                 <blockquote>
-                    <form action="change-password-action.php" method="POST">
+                    <form action="change-password-action.php" method="POST" class="centered-text">
                         <input type="hidden" name="user_id" value="<?=$id?>"/>
                         <?php
                             require("../fragments/password-entry.php");
                         ?>
-                        <button type="submit">Change password.</button>
+                        <button type="submit" class="block-label-blue"><?=$MSG['change_p']?></button>
                     </form>
                 </blockquote>
-            <blockquote>
-                <form action="change-image-action.php" method="POST">
-                    <input type="hidden" name="user_id" value="<?=$id?>"/>
-                    <?php
-                    require("../fragments/image-change.php");
-                    ?>
-                    <button type="submit">Change the image.</button>
-                </form>
-            </blockquote>
             <blockquote>
                 <form action="change-info-action.php" method="POST">
                     <input type="hidden" name="user_id" value="<?=$id?>"/>
                     <?php
                     require("../fragments/info-entry.php");
                     ?>
-                    <button type="submit">Change info.</button>
+                    <button type="submit" class="block-label-blue"><?=$MSG['change_inf']?></button>
                 </form>
             </blockquote>
             <?php

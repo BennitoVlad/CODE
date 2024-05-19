@@ -3,7 +3,7 @@ $collision = @$_GET['collision'];
 $missing = @$_GET['missing'];
 $mfieldlist = explode(" ", $missing);
 $mfieldkeys = array_flip($mfieldlist);
-
+require("../connect/language.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +26,7 @@ $mfieldkeys = array_flip($mfieldlist);
         if(array_key_exists('new_login', $mfieldkeys)){
             ?>
             <div class="warning-label">
-                <label class="errmsg">'Login' field needs to be filled in.</label>
+                <label class="errmsg"><?=$MSG['fill_in_login']?></label>
             </div>
             
             <?php
@@ -34,13 +34,13 @@ $mfieldkeys = array_flip($mfieldlist);
         else if($collision){
             ?>
             <div class="warning-label">
-                <label class="errmsg">Login (E-mail) is already registered.</label>
+                <label class="errmsg"><?=$MSG['fill_in']?></label>
             </div>
             
             <?php
         }?>
             <div class="double-row"  style="margin: 2%">
-                <label for="login" class="block-label-white">Your login (E-mail):</label>
+                <label for="login" class="block-label-white"><?=$MSG['your_login']?></label>
                 <input name="new_login" id="login" type="text"/>
             </div>
 
@@ -49,13 +49,13 @@ $mfieldkeys = array_flip($mfieldlist);
         if(array_key_exists('first_name', $mfieldkeys)){
         ?>
             <div class="warning-label">
-                <label class="errmsg">'First name' field needs to be filled in.</label>
+                <label class="errmsg"><?=$MSG['fill_in']?></label>
             </div>
         
         <?php
         }?>
             <div class="double-row" style="margin: 2%">
-                <label for="first_name" class="block-label-white">Your first name:</label>
+                <label for="first_name" class="block-label-white"><?=$MSG['your_name']?></label>
                 <input name="first_name" id="first_name" type="text">
             </div>
 
@@ -63,13 +63,13 @@ $mfieldkeys = array_flip($mfieldlist);
         if(array_key_exists('last_name', $mfieldkeys)){
             ?>
             <div class="warning-label">
-                <label class="errmsg">'Last name' field needs to be filled in.</label>
+                <label class="errmsg"><?=$MSG['fill_in']?></label>
             </div>
             
             <?php
         }?>
             <div class="double-row" style="margin: 2%">
-                <label for="last_name" class="block-label-white">Your last name:</label>
+                <label for="last_name" class="block-label-white"><?=$MSG['your_surname']?></label>
                 <input name="last_name" id="last_name" type="text">
             </div>
 
@@ -78,13 +78,13 @@ $mfieldkeys = array_flip($mfieldlist);
         if(array_key_exists('role', $mfieldkeys)){
             ?>
             <div class="warning-label">
-                <label class="errmsg">'Role' field needs to be filled in.</label>
+                <label class="errmsg"><?=$MSG['fill_in']?></label>
             </div>
             
             <?php
         }?>
             <div class="double-row" style="margin: 2%">
-                <label for="role" class="block-label-white">Who are you?</label>
+                <label for="role" class="block-label-white"><?=$MSG['your_role']?></label>
                 <select name="role" id="role" class="block-label-blue">
                     <option value="contractor">Freelancer</option>
                     <option value="client">Client</option>
@@ -96,7 +96,7 @@ $mfieldkeys = array_flip($mfieldlist);
             require("../fragments/password-entry.php")
         ?>
 
-            <button type="submit" class="block-label-blue" id="register-button">Register.</button>
+            <button type="submit" class="block-label-blue" id="register-button"><?=$MSG['the_registration']?></button>
     </form>
 </div>
 <div id="register-block-picture" class="centered-text">
