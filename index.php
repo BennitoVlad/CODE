@@ -24,5 +24,7 @@ header("Location: http://$host$uri/pages/index.php");
 <!-- DONE!      Show projects for clients and contractors. -->
 <!-- DONE!      Page switching. -->
 <!-- Nah.       Add bottom panel. -->
-<!-- Extend top panel functions. -->
-<!-- -->
+<!-- DONE!      Extend top panel functions. -->
+<!-- Make images. -->
+<!-- Make project shown. -->
+<!-- Make projects available for undertaking and management. -->

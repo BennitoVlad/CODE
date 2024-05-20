@@ -83,19 +83,28 @@
             }
         ?>
             <div class="centered-text">
-                <img style="max-width: 25%" src="" alt="Profile image.">
+                <?php
+                    $stmt = $mysqli->prepare("SELECT image_data FROM Participant WHERE id = ?;");
+                    $stmt -> bind_param("i", $id);
+                    $stmt->execute();
+                    if($stmt->get_result()->fetch_row()[0]){
+                ?>
+                    <img style="max-width: 25%" src="image<?=$id?>" alt="Profile image.">
+                <?php
+                    }
+                ?>
             </div>
         <?php
 
         if($login_id == $id){
             ?>
             <blockquote>
-                <form action="change-image-action.php" method="POST" class="centered-text">
+                <form action="change-image-action.php" method="POST" class="centered-text" enctype="multipart/form-data">
                     <input type="hidden" name="user_id" value="<?=$id?>"/>
-                    <?php
-                        require("../fragments/image-change.php");
-                    ?>
-                    <button type="submit" class="block-label-blue"><?=$MSG['change_i']?></button>
+                    <div class="double-row">
+                        <input type="file" name="file" id="file">
+                        <button type="submit" class="block-label-blue"><?=$MSG['change_i']?></button>
+                    </div>
                 </form>
             </blockquote>
 

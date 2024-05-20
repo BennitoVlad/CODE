@@ -58,3 +58,5 @@ INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Додрукарська пі�
 
 ALTER TABLE Project
     MODIFY COLUMN completed BOOL DEFAULT FALSE;
+
+ALTER TABLE Participant MODIFY image_data BOOL DEFAULT FALSE;
