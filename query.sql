@@ -60,3 +60,4 @@ ALTER TABLE Project
     MODIFY COLUMN completed BOOL DEFAULT FALSE;
 
 ALTER TABLE Participant MODIFY image_data BOOL DEFAULT FALSE;
+UPDATE Participant SET image_data = 0 WHERE ISNULL(image_data);

@@ -25,6 +25,6 @@ header("Location: http://$host$uri/pages/index.php");
 <!-- DONE!      Page switching. -->
 <!-- Nah.       Add bottom panel. -->
 <!-- DONE!      Extend top panel functions. -->
-<!-- Make images. -->
+<!-- DONE!      Make images. -->
 <!-- Make project shown. -->
 <!-- Make projects available for undertaking and management. -->

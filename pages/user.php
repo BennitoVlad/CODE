@@ -89,8 +89,11 @@
                     $stmt->execute();
                     if($stmt->get_result()->fetch_row()[0]){
                 ?>
-                    <img style="max-width: 25%" src="image<?=$id?>" alt="Profile image.">
+                    <img style="max-width: 25%" src="../uploads/image<?=$id?>" alt="Profile image.">
                 <?php
+                    }
+                    else{
+                        ?> <p>No image.</p> <?php
                     }
                 ?>
             </div>
@@ -102,7 +105,7 @@
                 <form action="change-image-action.php" method="POST" class="centered-text" enctype="multipart/form-data">
                     <input type="hidden" name="user_id" value="<?=$id?>"/>
                     <div class="double-row">
-                        <input type="file" name="file" id="file">
+                        <input class="centered-text" type="file" name="file" id="file">
                         <button type="submit" class="block-label-blue"><?=$MSG['change_i']?></button>
                     </div>
                 </form>
