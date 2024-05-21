@@ -3,7 +3,7 @@ $missing = @$_GET['missing'];
 $failed = @$_GET['failed'];
 $mfieldlist = explode(" ", $missing);
 $mfieldkeys = array_flip($mfieldlist);
-require("../connect/language.php")
+require("../connect/language.php");
 ?>
 
 <!DOCTYPE html>

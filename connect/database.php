@@ -1,7 +1,7 @@
 <?php
 define("hostname", "localhost");
-define("user", "moderator");
-define("password", "6503916162");
+define("user", "Cat");
+define("password", "1618");
 define("database", "freelance");
 
 function db_connect()
