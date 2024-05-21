@@ -33,8 +33,8 @@ require("../connect/language.php");
         }
         else if($collision){
             ?>
-            <div class="warning-label">
-                <label class="errmsg"><?=$MSG['fill_in']?></label>
+            <div class="warning-label centered-text">
+                <label class="errmsg"><?=$MSG['collision']?></label>
             </div>
             
             <?php
@@ -48,7 +48,7 @@ require("../connect/language.php");
         <?php
         if(array_key_exists('first_name', $mfieldkeys)){
         ?>
-            <div class="warning-label">
+            <div class="warning-label centered-text">
                 <label class="errmsg"><?=$MSG['fill_in']?></label>
             </div>
         
@@ -62,7 +62,7 @@ require("../connect/language.php");
         <?php
         if(array_key_exists('last_name', $mfieldkeys)){
             ?>
-            <div class="warning-label">
+            <div class="warning-label centered-text">
                 <label class="errmsg"><?=$MSG['fill_in']?></label>
             </div>
             
@@ -77,7 +77,7 @@ require("../connect/language.php");
         <?php
         if(array_key_exists('role', $mfieldkeys)){
             ?>
-            <div class="warning-label">
+            <div class="warning-label centered-text">
                 <label class="errmsg"><?=$MSG['fill_in']?></label>
             </div>
             

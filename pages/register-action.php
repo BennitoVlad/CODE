@@ -30,6 +30,8 @@ else {
     require_once("../connect/session.php");
     $hash = salted_password_hash($password);
 
+    $role = $_POST['role']; //  It just does not work the way it was intended to, so I have to do it manually.
+
     $stmt = $mysqli->prepare("INSERT INTO Participant (login, hash, first_name, last_name, role) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $new_login, $hash, $first_name, $last_name, $role);
     $stmt->execute();
