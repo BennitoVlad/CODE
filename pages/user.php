@@ -42,7 +42,7 @@
         </div>
         <?php
 
-            if($role='contractor'){
+            if($role=='contractor'){
                 $stmt = $mysqli->prepare("SELECT COUNT(*) FROM Project WHERE contractor_id = ?;");
                 $stmt->bind_param("i", $id);
                 $stmt->execute();
@@ -113,45 +113,45 @@
 
             <h2 class="centered-text"><?=$MSG['this_is_you']?></h2>
             <?php
-            if($role='contractor'){
+            if($role=='contractor'){
             ?>
-            <blockquote>
-                <form action="change-types-action.php" method="POST" class="centered-text">
-                    <input type="hidden" id="id" name="id" value="<?=$id?>">
-                    <div class="double-row">
-                        <label class="block-label-bordered-black" style="padding: 2%"><?=$MSG['types']?>:</label>
-                        <div class="block-label-bordered-black"  style="padding: 2%">
-                            <?php
-                                $stmt = $mysqli->prepare("SELECT * FROM ProjectType;");
-                                $stmt->execute();
-                                $result = $stmt->get_result();
+                <blockquote>
+                    <form action="change-types-action.php" method="POST" class="centered-text">
+                        <input type="hidden" id="id" name="id" value="<?=$id?>">
+                        <div class="double-row">
+                            <label class="block-label-bordered-black" style="padding: 2%"><?=$MSG['types']?>:</label>
+                            <div class="block-label-bordered-black"  style="padding: 2%">
+                                <?php
+                                    $stmt = $mysqli->prepare("SELECT * FROM ProjectType;");
+                                    $stmt->execute();
+                                    $result = $stmt->get_result();
 
-                                while($TYPE = $result->fetch_assoc()){
-                            ?>
-                                    <input type="checkbox" id="<?=$TYPE['title']?>" name="<?=$TYPE['title']?>"
-                                    <?php
-                                        $stmt = $mysqli->prepare("SELECT COUNT(*) FROM ParticipantsTypes WHERE participant_id = ? AND projecttype_id = ?;");
-                                        $stmt -> bind_param("ii", $id, $TYPE['id']);
-                                        $stmt -> execute();
+                                    while($TYPE = $result->fetch_assoc()){
+                                ?>
+                                        <input type="checkbox" id="<?=$TYPE['title']?>" name="<?=$TYPE['title']?>"
+                                        <?php
+                                            $stmt = $mysqli->prepare("SELECT COUNT(*) FROM ParticipantsTypes WHERE participant_id = ? AND projecttype_id = ?;");
+                                            $stmt -> bind_param("ii", $id, $TYPE['id']);
+                                            $stmt -> execute();
 
-                                        if($stmt->get_result()->fetch_row()[0]){
-                                            ?>
-                                                checked
-                                            <?php
-                                        }
-                                    ?>
+                                            if($stmt->get_result()->fetch_row()[0]){
+                                                ?>
+                                                    checked
+                                                <?php
+                                            }
+                                        ?>
 
-                                    >
-                                    <label for="<?=$TYPE['title']?>"><?=$TYPE['title']?></label>
-                                    <br/>
-                            <?php
-                                }
-                            ?>
+                                        >
+                                        <label for="<?=$TYPE['title']?>"><?=$TYPE['title']?></label>
+                                        <br/>
+                                <?php
+                                    }
+                                ?>
+                            </div>
                         </div>
-                    </div>
-                    <button type="submit" class="block-label-blue"><?=$MSG['change_types']?></button>
-                </form>
-            </blockquote>
+                        <button type="submit" class="block-label-blue"><?=$MSG['change_types']?></button>
+                    </form>
+                </blockquote>
             <?php
             }
             ?>
