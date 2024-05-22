@@ -112,6 +112,9 @@
             </blockquote>
 
             <h2 class="centered-text"><?=$MSG['this_is_you']?></h2>
+            <?php
+            if($role='contractor'){
+            ?>
             <blockquote>
                 <form action="change-types-action.php" method="POST" class="centered-text">
                     <input type="hidden" id="id" name="id" value="<?=$id?>">
@@ -149,6 +152,9 @@
                     <button type="submit" class="block-label-blue"><?=$MSG['change_types']?></button>
                 </form>
             </blockquote>
+            <?php
+            }
+            ?>
             <blockquote>
                     <form action="change-password-action.php" method="POST" class="centered-text">
                         <input type="hidden" name="user_id" value="<?=$id?>"/>

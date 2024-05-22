@@ -14,6 +14,10 @@ require_once("../connect/session.php");
 
             if(@$login){
                 require("../fragments/dashboard.php");
+                require ("../fragments/index-gallery.php");
+                require ("../fragments/index-projects.php");
+                require ("../fragments/index-info.php");
+                require ("../fragments/index-faq.php");
 
              } else if(!@$_GET['short']) {
                 require ("../fragments/index-intro.php");
