@@ -42,22 +42,30 @@ CREATE TABLE Commentary(
                            sent_time TIMESTAMP
 );
 
-INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Програмування');
-INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Дизайн та арт');
-INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Послуги');
-INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Аудіо та відео');
-INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Просування');
-INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Архітектура та інжиніринг');
-INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Мобільні додатки');
-INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Адміністрування');
-INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Аутсорсинг та консалтинг');
-INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Переклади');
-INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Робота з текстами');
-INSERT INTO `ProjectType` (`id`,`title`) VALUES ('3D-моделювання');
-INSERT INTO `ProjectType` (`id`,`title`) VALUES ('Додрукарська підготовка');
+INSERT INTO `ProjectType` (`title`) VALUES ('Дизайн та арт');
+INSERT INTO `ProjectType` (`title`) VALUES ('Програмування');
+INSERT INTO `ProjectType` (`title`) VALUES ('Послуги');
+INSERT INTO `ProjectType` (`title`) VALUES ('Аудіо та відео');
+INSERT INTO `ProjectType` (`title`) VALUES ('Просування');
+INSERT INTO `ProjectType` (`title`) VALUES ('Архітектура та інжиніринг');
+INSERT INTO `ProjectType` (`title`) VALUES ('Мобільні додатки');
+INSERT INTO `ProjectType` (`title`) VALUES ('Адміністрування');
+INSERT INTO `ProjectType` (`title`) VALUES ('Аутсорсинг та консалтинг');
+INSERT INTO `ProjectType` (`title`) VALUES ('Переклади');
+INSERT INTO `ProjectType` (`title`) VALUES ('Робота з текстами');
+INSERT INTO `ProjectType` (`title`) VALUES ('3D-моделювання');
+INSERT INTO `ProjectType` (`title`) VALUES ('Додрукарська підготовка');
 
 ALTER TABLE Project
     MODIFY COLUMN completed BOOL DEFAULT FALSE;
 
 ALTER TABLE Participant MODIFY image_data BOOL DEFAULT FALSE;
 UPDATE Participant SET image_data = 0 WHERE ISNULL(image_data);
+
+CREATE TABLE ParticipantsTypes
+(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    participant_id INT NOT NULL REFERENCES Participant(id),
+    projecttype_id INT NOT NULL REFERENCES ProjectType(id)
+
+);
