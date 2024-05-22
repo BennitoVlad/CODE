@@ -48,7 +48,9 @@
             for($i = 0; $i < 4 && $i < count($participant_ids); ++$i) {
                 ?>
                 <div class="index-gallery-secondary-picture ">
+                    <a href="../pages/user.php?id=<?=$participant_ids[$i][0]?>">
                     <img src="../uploads/image<?=$participant_ids[$i][0]?>" class="index-gallery-secondary-picture rounded-image">
+                    </a>
                 </div>
                 <?php
             }
