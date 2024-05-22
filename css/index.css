@@ -243,7 +243,6 @@ div.index-gallery-secondary-picture {
 }
 #index-projects-secondary-block{
     display: grid;
-    grid-template-rows: 4fr 1fr;
     padding: 2%;
 }
 
