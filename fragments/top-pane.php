@@ -36,7 +36,7 @@ if(!@$login){   //  Basic panel.
     <div style="display: grid; grid-template-columns: 3fr repeat(3, 1fr) 3fr">
         <a style="text-decoration: none; color: black; padding: 2%" href="../pages/index.php"><strong>Free</strong>lance</a>
         <a style="text-decoration: none; color: black; padding: 2%" href=""><?=$MSG['my_projects']?></a>
-        <a style="text-decoration: none; color: black; padding: 2%" href=""><?=$MSG['projects']?></a>
+        <a style="text-decoration: none; color: black; padding: 2%" href="../pages/projects.php"><?=$MSG['projects']?></a>
         <a style="text-decoration: none; color: black; padding: 2%" href=""><?=$MSG['contractors']?></a>
         <div style="display: grid; grid-template-columns: 3fr repeat(3, 1fr)">
             <a class="block-label-blue" href="../pages/add-project.php"><?=$MSG['new_project']?></a>

@@ -5,20 +5,7 @@
 ?>
 <h1 class="centered-text">Шукайте роботу серед <?=$open_projs?> відкритих фриланс-проєктів</h1>
 <div id="index-projects-main-block">
-    <div id="index-projects-projtypes" class=" block-label-white">
-        <ul id="index-projects-projtypes-list">
-            <?php
-            $stmt = $mysqli->prepare("SELECT id, title FROM ProjectType;");
-            $stmt->execute();
-            $result = $stmt->get_result();
-            while ($TYPE = $result->fetch_assoc()){
-                ?>
-                <li><a href="projects.php?cat=<?=$TYPE['id']?>"><?=$TYPE['title']?></a></li>
-                <?php
-            }
-            ?>
-        </ul>
-    </div>
+    <?php require("../fragments/projtypes.php");?>
 
     <div id="index-projects-secondary-block">
         <div id="index-projects-picture-block">

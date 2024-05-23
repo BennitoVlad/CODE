@@ -4,7 +4,7 @@ require_once("../fragments/vignettes.php");
 
 $id = 0 + $_GET['id'];
 $PRJ = retrieve_project($id);
-check_auth_or_redirect($PRJ);
+check_auth_or_redirect($PRJ);     //  At least because comments.
 $is_my_project = $login_id == $PRJ['client_id'];
 $PRJ = array_map("htmlspecialchars", $PRJ);
 
