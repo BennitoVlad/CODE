@@ -32,10 +32,10 @@ while($comment = $comments->fetch_assoc()) {
         ?><label class="block-label-blue"><?=$MSG['contractor_assigned']?></label><?php
     } else if($is_own_comm) {
         ?><input type="hidden" id="id" name="comment_id" value="<?=$comment['id']?>">
-        <input type="submit" value="<?=$MSG['action_delete']?>" class="block-label-red"><?php
+        <button type="submit" class="block-label-red"><?=$MSG['action_delete']?></button><?php
     } else if($is_ass_able) {
         ?><input type="hidden" id="id" name="contractor_id" value="<?=$comment['participant_id']?>">
-        <input type="submit" value="<?=$MSG['action_assign']?>" class="block-label-blue"><?php
+        <button type="submit" class="block-label-blue"><?=$MSG['action_assign']?></button><?php
     }
     ?>
     <input type="hidden" id="id" name="id" value="<?=$id?>">

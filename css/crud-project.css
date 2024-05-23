@@ -7,7 +7,7 @@ form, .commentary {
 }
 
 form{
-    grid-template-columns: repeat(2, 1fr);
+
 }
 
 .commentary{

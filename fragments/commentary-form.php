@@ -8,5 +8,5 @@
     <input id="message" name="message" class="transparent-input">
     <label></label>
     <input type="hidden" id="id" name="id" value="<?=$id?>">
-    <input type="submit" value="<?=$MSG['comment_send']?>" class="block-label-blue">
+    <button type="submit" class="block-label-blue"><?=$MSG['comment_send']?></button>
 </form>

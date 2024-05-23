@@ -24,13 +24,13 @@ $MSG = Array(
     'project_completed' => "Завершений",
 
     'project_post' => "Опублікувати проект",
-    'projects_open' => "Ваші незавершені проекти",
-    'projects_completed' => "Ваші готові проекти",
+    'projects_open' => "Незавершені проекти",
+    'projects_completed' => "Готові проекти",
     'projects_none' => "Таких проектів ще немає",
 
-    'projects_your' => "Ваші проекти",
-    'projects_assigned' => "Доручені вам проекти",
-    'projects_offered' => "Ваші пропозиції",
+    'projects_your' => "Проекти",
+    'projects_assigned' => "Доручені проекти",
+    'projects_offered' => "Пропозиції",
     'projects_all' => "Всі незавершені проекти",
     'project_types' => "Типи проектів",
     'project_types_all' => "Всі типи проектів",
@@ -47,6 +47,7 @@ $MSG = Array(
     'action_edit' => "Редагувати",
     'action_assign' => "Призначити контракт",
     'action_revoke' => "Скасувати призначення",
+    'action_finish' => "Закрити проєкт як успішно закінчений",
     'action_delete' => "Видалити",
 
     'yes' => "Так",
@@ -72,7 +73,7 @@ $MSG = Array(
 
     'fill_in' => "Це поле є обов'язковим.",
     'mismatch_lp' => "Надана комбінація паролю і логіну не відповідає жодному користувачеві.",
-    'you_are' =>  "Ви",
+    'you_are' =>  "",
     'this_is_you' => "Це ви.",
     'mismatch_p' => "Паролі повинні співпадати.",
     'change_p' => "Змінити пароль",

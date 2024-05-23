@@ -14,8 +14,11 @@ require_once("../connect/session.php");
 
             if(@$login){
                 require("../fragments/dashboard.php");
-                require ("../fragments/index-gallery.php");
-                require ("../fragments/index-projects.php");
+                if($is_contractor) {
+                    require ("../fragments/index-projects.php");
+                }else{
+                    require("../fragments/index-gallery.php");
+                }
                 require ("../fragments/index-info.php");
                 require ("../fragments/index-faq.php");
 

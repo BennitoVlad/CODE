@@ -16,18 +16,20 @@ require("../fragments/top-pane.php");
 <body>
 
     <form action="set-project-action.php" method="post">
-        <label for="title" class="<?=field_label_style('title')?>"><?=$MSG['project_name']?></label>
-        <input id="title" name="title" class="transparent-input">
-        <label for="type" class="<?=field_label_style('type')?>"><?=$MSG['project_type']?></label>
-        <?php require("../fragments/project-type.php"); ?>
-        <label for="description" class="<?=field_label_style('description')?>"><?=$MSG['project_desc']?></label>
-        <textarea id="description" name="description" class="transparent-input"></textarea>
-        <label for="price" class="<?=field_label_style('price')?>"><?=$MSG['project_reward']?></label>
-        <div class="payment">
-            <input name="price" id="price" type="number" class="transparent-input">
-            <label id="currency" class="block-label-white"><?=$MSG['currency_uah']?></label>
+        <div class="double-row">
+            <label for="title" class="<?=field_label_style('title')?>"><?=$MSG['project_name']?></label>
+            <input id="title" name="title" class="transparent-input">
+            <label for="type" class="<?=field_label_style('type')?>"><?=$MSG['project_type']?></label>
+            <?php require("../fragments/project-type.php"); ?>
+            <label for="description" class="<?=field_label_style('description')?>"><?=$MSG['project_desc']?></label>
+            <textarea id="description" name="description" class="transparent-input"></textarea>
+            <label for="price" class="<?=field_label_style('price')?>"><?=$MSG['project_reward']?></label>
+            <div class="payment">
+                <input name="price" id="price" type="number" class="transparent-input">
+                <label id="currency" class="block-label-white"><?=$MSG['currency_uah']?></label>
+            </div>
         </div>
-        <input type="submit" value="<?=$MSG['action_post']?>" class="block-label-blue">
+        <button type="submit" class="block-label-blue"><?=$MSG['action_post']?></button>
     </form>
 
 </body>

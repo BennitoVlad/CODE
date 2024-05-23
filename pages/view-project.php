@@ -20,7 +20,7 @@ require("../fragments/top-pane.php");
     <link rel="stylesheet" href="../css/crud-project.css">
 </head>
 <body>
-<form action="delete-project-action.php" method="post">
+<form action="delete-project-action.php" class="double-row" method="post">
     <label for="title" class="block-label-white"><?=$MSG['project_name']?></label>
     <label id="title" class="transparent-input"><?=$PRJ['title']?></label>
     <label for="description" class="block-label-white"><?=$MSG['project_desc']?></label>
@@ -42,13 +42,18 @@ require("../fragments/top-pane.php");
     <label id="completed" class="transparent-input"><?=$MSG[$PRJ['completed']?"yes":"no"]?></label>
     <label for="contractor" class="block-label-white"><?=$MSG['contractor']?>: </label>
     <label id="contractor" class="transparent-input"><?=$PRJ['contractor']?></label>
-    <?php if($is_customer /* redundant; extra caution */ && $PRJ['client_id'] == $login_id) {
+    <?php if($is_customer /* redundant; extra caution */ && $PRJ['client_id'] == $login_id && !$PRJ['completed']) {
         if($PRJ['contractor_id']) {
-            ?><input type="submit" name="revoke" value="<?=$MSG['action_revoke']?>" class="block-label-red"/><?php
+            ?>
+                <div class="double-row">
+                    <button type="submit" name="revoke" class="block-label-red"><?=$MSG['action_revoke']?></button>
+                    <button type="submit" name="finish" class="block-label-blue"><?=$MSG['action_finish']?></button>
+                </div>
+            <?php
         } else {
             ?><a href="edit-project.php?id=<?=$id?>" class="block-label-blue"><?=$MSG['action_edit']?></a><?php
         } ?>
-    <input type="submit" name="delete" value="<?=$MSG['action_delete']?>" class="block-label-red"/>
+        <button type="submit" name="delete" class="block-label-red"><?=$MSG['action_delete']?></button>
     <input type="hidden" id="id" name="id" value="<?=$id?>">
     <?php } ?>
 </form>
