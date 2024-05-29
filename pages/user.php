@@ -7,7 +7,8 @@
 <body>
     <?php
         require_once("../connect/session.php");
-
+        require_once("../fragments/vignettes.php");
+        check_auth_or_redirect(true);
 
         require("../fragments/top-pane.php");
 
@@ -166,13 +167,18 @@
                 </blockquote>
 
             <blockquote>
-                <form action="change-info-action.php" method="POST">
+                <form action="change-info-action.php" method="POST" class="centered-text" style="display: grid; grid-template-rows: 4fr 1fr">
                     <input type="hidden" name="user_id" value="<?=$id?>"/>
-                    <?php
-                    require("../fragments/info-entry.php");
-                    ?>
+                    <input type="text" name="info" value="<?=$info?>"/>
                     <button type="submit" class="block-label-blue"><?=$MSG['change_inf']?></button>
                 </form>
+            </blockquote>
+            <?php
+        }
+        else{
+            ?>
+            <blockquote  class="centered-text block-label-bordered" style="display: grid; grid-template-rows: 5fr; padding: 2%">
+                    <?=$info?>
             </blockquote>
             <?php
         }

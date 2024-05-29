@@ -18,13 +18,11 @@ if(!@$login){   //  Basic panel.
     ?>
     <div style="display: grid; grid-template-columns: 3fr 3fr">
         <a style="text-decoration: none; color: black; padding: 2%" href="../pages/index.php"><strong>Free</strong>lance</a>
-        <div style="display: grid; grid-template-columns: 3fr repeat(3, 1fr)">
-            <a class="block-label-blue" href=""><?=$MSG['find_project']?></a>
-            <form action="sign-out-action.php" method="post">
-                <button type="submit" name="submit" class="block-label-red" style="padding: 8%"><?=$MSG['user_log_out']?></button>
+        <div >
+            <form action="sign-out-action.php" method="post" class="double-row">
+                <button type="submit" name="submit" class="block-label-red"><?=$MSG['user_log_out']?></button>
+                <a href="user.php" class="block-label-blue"><?=$MSG['user_profile']?></a>
             </form>
-            <a href="user.php" class="block-label-blue" style="padding: 8%"><?=$MSG['user_profile']?></a>
-            <span class="block-label-white">N/A</span>
         </div>
     </div>
     <?php
@@ -35,14 +33,13 @@ if(!@$login){   //  Basic panel.
         <a style="text-decoration: none; color: black; padding: 2%" href=""><?=$MSG['my_projects']?></a>
         <a style="text-decoration: none; color: black; padding: 2%" href="../pages/projects.php"><?=$MSG['projects']?></a>
         <a style="text-decoration: none; color: black; padding: 2%" href=""><?=$MSG['contractors']?></a>
-        <div style="display: grid; grid-template-columns: 3fr repeat(3, 1fr)">
-            <a class="block-label-blue" href="../pages/add-project.php"><?=$MSG['new_project']?></a>
             <form action="sign-out-action.php" method="post">
-                <button type="submit" name="submit" class="block-label-red" style="padding: 8%"><?=$MSG['user_log_out']?></button>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr)" class="centered-text">
+                <a class="block-label-blue" href="../pages/add-project.php"><?=$MSG['new_project']?></a>
+                <button type="submit" name="submit" class="block-label-red"><?=$MSG['user_log_out']?></button>
+                <a href="user.php" class="block-label-blue"><?=$MSG['user_profile']?></a>
+                </div>
             </form>
-            <a href="user.php" class="block-label-blue" style="padding: 8%"><?=$MSG['user_profile']?></a>
-            <span class="block-label-white">N/A</span>
-        </div>
     </div>
     <?php
 
