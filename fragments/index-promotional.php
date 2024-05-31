@@ -40,8 +40,8 @@ $clients = $stmt->get_result()->fetch_row()[0];
             <img src="../images/шшш1.PNG"/>
         </div>
         <div id="index__promotional__why-us-block__info-block">
-                <h2 class="centered-text block-label-bordered-black">Проєкти для новачков та професіоналів</h2>
-                <h2 class="centered-text block-label-bordered-black">Чесний рейтинг</h2>
+                <h2 class="centered-text block-label-bordered" style="padding: 5%">Проєкти для новачков та професіоналів</h2>
+                <h2 class="centered-text block-label-bordered" style="padding: 15%">Чесний рейтинг</h2>
         </div>
     </div>
 </div>

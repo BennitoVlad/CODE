@@ -5,7 +5,7 @@ function check_auth_or_redirect($extra_condition) {
     if(!$login_id || !$extra_condition) {
         $host = $_SERVER['HTTP_HOST'];
         $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-        $extra = "index.php?short=1"; // need authorization
+        $extra = "index.php"; // need authorization
         header("Location: http://$host$uri/$extra");
         exit();
     }

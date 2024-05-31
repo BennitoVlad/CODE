@@ -38,8 +38,8 @@
 
         <p class="centered-text"><?=$MSG['you_are']?> <strong><?=$MSG[$role]?></strong>.</p>
         <div class="double-row">
-            <div class="centered-text block-label-bordered-black" style="padding: 2%"><?=$MSG['your_login']?></div>
-            <div class="centered-text block-label-bordered-black" style="padding: 2%;"><?=$userlogin?></div>
+            <div class="centered-text block-label-bordered" style="padding: 2%"><?=$MSG['your_login']?></div>
+            <div class="centered-text block-label-bordered" style="padding: 2%;"><?=$userlogin?></div>
         </div>
         <?php
 
@@ -55,10 +55,9 @@
                 $finished_projects = $stmt->get_result()->fetch_row()[0];
 
                 ?>
-                    <!-- Add a whole list of projects when projects will exist, damn it!-->
                     <div class="double-row">
-                        <div class="block-label-bordered-black centered-text" style="padding: 2%"><?=$MSG['projects_open']?>: <?=$undertaken_projects?></div>
-                        <div class="block-label-bordered-black centered-text" style="padding: 2%"><?=$MSG['projects_completed']?>: <?=$finished_projects?></div>
+                        <div class="block-label-bordered centered-text" style="padding: 2%"><?=$MSG['projects_open']?>: <?=$undertaken_projects?></div>
+                        <div class="block-label-bordered centered-text" style="padding: 2%"><?=$MSG['projects_completed']?>: <?=$finished_projects?></div>
                     </div>
                 <?php
             }
@@ -77,8 +76,8 @@
                 ?>
 
                     <div class="double-row">
-                        <div class="block-label-bordered-black centered-text" style="padding: 2%"><?=$MSG['projects_open']?>: <?=$projects_posted?></div>
-                        <div class="block-label-bordered-black centered-text" style="padding: 2%"><?=$MSG['projects_completed']?>: <?=$had_projects_finished?></div>
+                        <div class="block-label-bordered centered-text" style="padding: 2%"><?=$MSG['projects_open']?>: <?=$projects_posted?></div>
+                        <div class="block-label-bordered centered-text" style="padding: 2%"><?=$MSG['projects_completed']?>: <?=$had_projects_finished?></div>
                     </div>
                 <?php
             }
@@ -120,8 +119,8 @@
                     <form action="change-types-action.php" method="POST" class="centered-text">
                         <input type="hidden" id="id" name="id" value="<?=$id?>">
                         <div class="double-row">
-                            <label class="block-label-bordered-black" style="padding: 2%"><?=$MSG['types']?>:</label>
-                            <div class="block-label-bordered-black"  style="padding: 2%">
+                            <label class="block-label-bordered" style="padding: 2%"><?=$MSG['types']?>:</label>
+                            <div class="block-label-bordered"  style="padding: 2%">
                                 <?php
                                     $stmt = $mysqli->prepare("SELECT * FROM ProjectType;");
                                     $stmt->execute();

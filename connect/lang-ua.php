@@ -23,17 +23,17 @@ $MSG = Array(
     'project_date' => "Дата",
     'project_completed' => "Завершений",
 
-    'project_post' => "Опублікувати проект",
-    'projects_open' => "Незавершені проекти",
-    'projects_completed' => "Готові проекти",
-    'projects_none' => "Таких проектів ще немає",
+    'project_post' => "Опублікувати проєкт",
+    'projects_open' => "Незавершені проєкти",
+    'projects_completed' => "Готові проєкти",
+    'projects_none' => "Таких проєктів ще немає",
 
-    'projects_your' => "Проекти",
-    'projects_assigned' => "Доручені проекти",
+    'projects_your' => "Проєкти",
+    'projects_assigned' => "Доручені проєкти",
     'projects_offered' => "Пропозиції",
-    'projects_all' => "Всі незавершені проекти",
-    'project_types' => "Типи проектів",
-    'project_types_all' => "Всі типи проектів",
+    'projects_all' => "Всі незавершені проєкти",
+    'project_types' => "Типи проєктів",
+    'project_types_all' => "Всі типи проєктів",
 
     'currency_uah' => "₴",
 

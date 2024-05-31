@@ -5,9 +5,9 @@ $host = $_SERVER['HTTP_HOST'];
 $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 $id = 0 + @$_POST['id'];
 
+
 $types = array_reverse(array_keys($_POST));
 array_pop($types);
-
 $type_ids = array();
 for($i = 0; $i < count($types); ++$i){
     $title = str_replace("_", " ", $types[$i]);

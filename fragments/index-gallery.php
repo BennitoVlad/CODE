@@ -37,8 +37,8 @@
 
             $real_amount = $stmt->get_result()->fetch_row()[0];
 
-            $stmt = $mysqli->prepare("SELECT ParticipantsTypes.participant_id FROM ParticipantsTypes INNER JOIN Participant "
-                ."WHERE ParticipantsTypes.projecttype_id = ? AND Participant.image_data = TRUE;");
+            $stmt = $mysqli->prepare("SELECT DISTINCT ParticipantsTypes.participant_id FROM ParticipantsTypes INNER JOIN Participant "
+                ."ON ParticipantsTypes.projecttype_id = ? AND Participant.image_data = TRUE;");
             $stmt->bind_param("i", $cat);
             $stmt->execute();
 
@@ -49,7 +49,7 @@
                 ?>
                 <div class="index-gallery-secondary-picture ">
                     <a href="../pages/user.php?id=<?=$participant_ids[$i][0]?>">
-                    <img src="../uploads/image<?=$participant_ids[$i][0]?>" class="index-gallery-secondary-picture rounded-image">
+                        <img src="../uploads/image<?=$participant_ids[$i][0]?>" class="index-gallery-secondary-picture rounded-image">
                     </a>
                 </div>
                 <?php

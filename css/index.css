@@ -199,10 +199,8 @@ div.index-gallery-secondary-picture {
     grid-template-columns: repeat(3, 1fr);
 }
 .index__promotional__card {
-    float: left;
     margin: 1%;
     padding: 1%;
-    border: 2px black solid;
     background: #FFFFFF;
     border-radius: 16px;
 }
