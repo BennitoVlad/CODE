@@ -19,7 +19,7 @@
         <?php require("../fragments/projtypes.php");?>
         <div id="projects-main-block">
             <?php       //  Preparations.
-                    $stmt = $mysqli -> prepare("SELECT COUNT(*) FROM Project WHERE projecttype_id = ?;");
+                    $stmt = $mysqli -> prepare("SELECT COUNT(*) FROM Project WHERE projecttype_id = ? AND completed = FALSE;");
                     $stmt->bind_param("i", $cat);
                     $stmt->execute();
 
@@ -45,7 +45,7 @@
                             $projects_on_page
                         );
 
-                    $stmt = $mysqli->prepare("SELECT * FROM Project WHERE projecttype_id = ? AND completed = FALSE;");
+                    $stmt = $mysqli->prepare("SELECT * FROM Project WHERE projecttype_id = ? AND completed = FALSE AND NOT ISNULL(id);");
                     $stmt->bind_param("i", $cat);
                     $stmt->execute();
                     $projects = array_reverse($stmt->get_result()->fetch_all());
