@@ -17,7 +17,7 @@ require("../fragments/top-pane.php");
     <link rel="stylesheet" href="../css/crud-project.css">
 </head>
 <body>
-<form action="set-project-action.php" method="post">
+<form action="set-project-action.php" method="post" class="commentary">
     <div class="double-row">
         <label for="title" class="<?=field_label_style('title')?>"><?=$MSG['project_name']?></label>
         <input id="title" name="title" class="transparent-input" value="<?=$PRJ['title']?>">

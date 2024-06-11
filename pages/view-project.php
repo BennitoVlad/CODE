@@ -20,7 +20,12 @@ require("../fragments/top-pane.php");
     <link rel="stylesheet" href="../css/crud-project.css">
 </head>
 <body>
-<form action="delete-project-action.php" class="double-row" method="post">
+<form action="delete-project-action.php" class="  double-row" method="post" style="
+    margin: 0 10% 0 10%;
+    background: #d0daea;
+    opacity: 90%;
+    padding: 10%;"
+>
     <label for="title" class="block-label-white"><?=$MSG['project_name']?></label>
     <label id="title" class="transparent-input"><?=$PRJ['title']?></label>
     <label for="description" class="block-label-white"><?=$MSG['project_desc']?></label>
